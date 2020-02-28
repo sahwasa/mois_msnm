@@ -1,4 +1,4 @@
-# mois_msnm
+# mois_idsp
 행안부_대국민상황전파
 
 ## 참고사항
