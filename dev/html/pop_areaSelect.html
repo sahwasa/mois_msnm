@@ -1,0 +1,178 @@
+<div class="overlay" style="display: block;">
+  <div class="pop_wrap modal area_select" dataformat="modal">
+    <div class="pop_tit">
+      <h1>상황전파 지역선택</h1>
+      <button type="button" class="axi_only axi_cross" role="btn_close">닫기</button>
+    </div>
+    <div class="pop_body">
+      <div class="selected">
+        <ul class="list_selected">
+          <li>홍천군 <button type="button" class="axi_only axi_del">삭제</button></li>
+          <li>홍천군 <button type="button" class="axi_only axi_del">삭제</button></li>
+        </ul>        
+      </div>
+      <div class="section fl">
+        <ul class="tabs">
+          <li class="on"><a href="#tab01">지도에서 선택</a></li>
+          <li><a href="#tab02">그룹지역</a></li>
+        </ul>
+        <div class="tab_conts">
+          <div id="tab01" class="tab_cont">
+            <table class="tbl_layout">
+              <caption>지도에서 상황전파 지역선택</caption>
+              <colgroup>
+                <col width="70px" />
+                <col width="100px" />
+                <col width="420px" />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">지역목록</th>
+                  <th scope="col">시군구</th>
+                  <th scope="col">시도&sol;시군구 지도 선택</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="scroll-y" style="height:457px;">
+                      <ul class="list_area cities" role="selAreaEvt">
+                        <li><input type="checkbox" id="m00" /><label for="m00">전국</label></li>
+                        <li><input type="radio" id="m01" name="cities" /><label for="m01">서울</label></li>
+                        <li><input type="radio" id="m02" name="cities" /><label for="m02">경기</label></li>
+                        <li><input type="radio" id="m03" name="cities" /><label for="m03">인천</label></li>
+                        <li><input type="radio" id="m04" name="cities" /><label for="m04">충북</label></li>
+                        <li><input type="radio" id="m05" name="cities" /><label for="m05">충남</label></li>
+                      </ul>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="scroll-y" style="height:457px;">
+                      <ul class="list_area county" role="selAreaEvt">
+                        <li><input type="checkbox" id="sm00" role="all" /><label for="sm00">전체</label></li>
+                        <li><input type="checkbox" id="sm01" /><label for="sm01">금천구</label></li>
+                        <li><input type="checkbox" id="sm02" /><label for="sm02">구로구</label></li>
+                        <li><input type="checkbox" id="sm03" /><label for="sm03">강서구</label></li>
+                        <li><input type="checkbox" id="sm04" /><label for="sm04">관악구</label></li>
+                        <li><input type="checkbox" id="sm05" /><label for="sm05">영등포구</label></li>
+                      </ul>
+                    </div>
+                  </td>
+                  <td>
+                    <img src="http://placehold.it/410x510" alt="">
+                  </td>
+                </tr>              
+              </tbody>
+            </table>
+          </div>
+          <div id="tab02" class="tab_cont">
+            <table class="tbl_layout">
+              <caption>그룹 지역선택</caption>
+              <colgroup>
+                <col width="170px" />
+                <col width="420px" />
+              </colgroup>            
+              <thead>
+                <tr>
+                  <th scope="col" colspan="2">그룹지역선택</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <ul class="list_area" role="groupViewEvt">
+                      <li>
+                        <label for="area01"><input type="checkbox" name="" id="area01">전국</label>
+                      </li>
+                      <li class="on">
+                        <label for="area02"><input type="checkbox" name="" id="area02">서울·경기</label>
+                      </li>
+                      <li>
+                        <label for="area03"><input type="checkbox" name="" id="area03">서울·경기·인천</label>
+                      </li>
+                    </ul>
+                  </td>
+                  <td>
+                    <div class="area_groupWrap">
+                      <dl class="area_group">
+                        <dt>서울시</dt>
+                        <dd>서구,강남구서구,강남구서구,강남구서구,강남구서구,강남구서구, 강남구서구,강남구서구,강남구서구,강남구</dd>
+                        <dt>서울시</dt>
+                        <dd>서구, 강남구서구, 강남구서구, 강남구서구, 강남구서구, 강남구서구, 강남구서구, 강남구서구, 강남구서구, 강남구</dd>
+                        <dt>서울시</dt>
+                        <dd>서구, 강남구서구, 강남구서구, 강남구서구, 강남구서구, 강남구서구, 강남구서구, 강남구서구, 강남구서구, 강남구</dd>
+                      </dl>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="section fr sel_area">
+        <div class="tit">
+          <h3>선택된지도</h3>
+        </div>
+        <div class="map_area">
+          <img src="http://placehold.it/410x510" alt="선택된 지도" />
+        </div>
+      </div>       
+    </div>
+    <div class="pop_footer">      
+      <div class="btn_area">
+        <span class="fr">
+          <button type="button" class="btn btn_blue">적용</button>
+          <button type="button" class="btn btn_blue">초기화</button>
+          <button type="button" class="btn btn_gray" role="btn_close">취소</button>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function citiesCheckEvt(){
+    var citiesCheck =  $('[role="selAreaEvt"]'), allBtn = $('[role="all"]');
+    citiesCheck.on('change','input',function(){
+      var sel = $(this),
+          selP = sel.parents('[role="selAreaEvt"]');
+        if(sel[0].type === 'radio') selP.find('li').removeClass('on');
+
+        (sel.prop('checked')) ?
+        sel.parents('li').addClass('on') :
+        sel.parents('li').removeClass('on');
+        allEvt(selP);
+    });
+
+    allBtn.on('change',function(){
+    var sel = $(this),
+        selUl = $(this).parents('ul');
+
+      if(sel.prop('checked')){
+        selUl.find(':checkbox').prop('checked',true);
+        selUl.find('li').addClass('on');
+      }else{
+        selUl.find(':checkbox').prop('checked',false);
+        selUl.find('li').removeClass('on');
+      }
+    });
+
+    function allEvt(selP){
+    var checkLeng = selP.find(':checkbox:checked').length,
+        allLeng = selP.find(':checkbox').length,
+        thisAll = selP.find('[role="all"]');
+    
+     (checkLeng === allLeng) ?
+      thisAll.prop('checked',true).parents('li').addClass('on') :
+      thisAll.prop('checked',false).parents('li').removeClass('on');
+    }    
+    
+    var groupList = $('[role="groupViewEvt"]');
+        groupList.on('click','li',function(){
+          $(this).parents('ul').find('li').removeClass('on');
+          $(this).addClass('on');
+        })    
+  }
+
+</script>

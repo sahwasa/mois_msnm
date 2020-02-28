@@ -1,0 +1,64 @@
+<div class="overlay" style="display:block;">
+  <div class="pop_wrap modal board" dataformat="modal">
+    <div class="pop_tit">
+      <h1>FAQ 목록</h1>
+      <button type="button" class="axi_only axi_cross" role="btn_close">닫기</button>      
+    </div>
+    <div class="pop_body">
+      <div class="filter">
+        <ul class="use_grid">
+          <li>
+            <select name="" id="" title="검색어 종류">
+              <option value="">선택</option>
+              <option value="">제목</option>
+              <option value="">내용</option>
+            </select>
+            <input type="text" title="검색어 입력" />
+            <button type="button" class="btn btn_blueline">조회</button>
+          </li>
+        </ul>        
+      </div>
+      <div class="tbl_areaT">
+        <span class="count">
+          전체 <b class="t_blue">123</b>건
+        </span>
+      </div>
+      <div class="tbl_wrap">
+        <table id="jqGrid_faq" class="jq-grid"></table>
+        <div id="jqGridPager_faq"></div>
+      </div>      
+    </div>
+    <div class="pop_footer">      
+      <div class="btn_area">
+        <span class="fr">
+          <button type="button" class="btn btn_blue">등록</button>
+          <button type="button" class="btn btn_gray" role="btn_close">취소</button>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  var data_faq = [
+    {"th1":"FAQ"}
+  ];
+function boardFAQGrid(){
+    $("#jqGrid_faq").jqGrid({
+      data:data_faq,
+      datatype: "local",
+      colModel: [
+        { label: '제목', name: 'th1', align: 'left'}
+      ],
+      height:260,
+      rowTotal:-1,
+      rowNum:10,
+      rownumbers: true,
+      rownumWidth: 25,
+      pager: "#jqGridPager_faq",
+      jsonReader : {repeatitems : false}                     
+    });
+     // 페이지 사이즈에 맞게 그리드 넓이를 불러오는 함수입니다.
+    // ui_common.js에 위치합니다.
+    jqgridInit();
+};
+</script>

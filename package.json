@@ -1,0 +1,18 @@
+{
+  "name": "idsp",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "KITValley",
+  "license": "ISC",
+  "dependencies": {
+    "bower": "^1.8.8",
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-file-include": "^2.1.0",
+    "gulp-imagemin": "^6.1.0"
+  },
+  "description": ""
+}

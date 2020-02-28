@@ -1,0 +1,170 @@
+@@include('../inc/top.html')
+<body>
+<!-- width : 1280px; height : 720px; -->
+<div class="pop_wrap win warning_present">
+  <div class="pop_tit">
+    <h1>재난 예경보 송출현황</h1>
+  </div>
+  <div class="pop_body">
+    <div class="section fl">
+      <div class="article box_t_db">
+        <div class="article_tit">
+          <h2>기간별 상황전파 현황 (2019.12.06 13시 기준)</h2>
+        </div>
+        <div class="article_body">
+          <div class="ctrl_zoom">
+            <ul class="li_btn_zoom">
+              <li><button type="button">24시</button></li>
+              <li><button type="button">10일</button></li>
+              <li><button type="button">1개월</button></li>
+              <li><button type="button">6개월</button></li>
+              <li><button type="button">1년</button></li>
+            </ul>
+          </div>
+          <div class="box_gray">
+            차트영역
+          </div>
+        </div>
+      </div>
+      <div class="article box_t_db">
+        <div class="article_tit">
+          <h2>유형별 상황전파 현황 (2019.12.06 13시 기준)</h2>
+          <span class="fr">
+            <span class="axi axi_dir_r">전체 : 11건</span>
+          </span>
+        </div>
+        <div class="article_body">
+          <div class="ctrl_zoom">
+            <ul class="li_btn_zoom">
+              <li><button type="button">24시</button></li>
+              <li><button type="button">10일</button></li>
+              <li><button type="button">1개월</button></li>
+              <li><button type="button">6개월</button></li>
+              <li><button type="button">1년</button></li>
+            </ul>
+          </div>
+          <div class="box_gray tbl_wrap">
+            <table id="jqGrid" class="jq-grid"></table>
+          </div>
+        </div>
+      </div>
+    </div>   
+    <div class="section fr">
+      <div class="article box_t_db">
+        <div class="article_tit">
+          <h2>지역별 상황전파 현황</h2>
+        </div>
+        <div class="article_body">
+          <div class="ctrl_zoom">
+            <ul class="li_btn_zoom">
+              <li><button type="button">1주</button></li>
+              <li><button type="button">1개월</button></li>
+              <li><button type="button">6개월</button></li>
+              <li><button type="button">1년</button></li>
+            </ul>
+          </div>
+          <div class="map_wrap box_gray">
+            <img src="../img/map.png" width="100%" height="auto" alt="배경지도">
+            <ul class="li_mapData">
+              <li class="area01">서울<span>0&sol;0&sol;0</span></li>
+              <li class="area02">강원<span>0&sol;0&sol;0</span></li>
+              <li class="area03">인천<span>0&sol;0&sol;0</span></li>
+              <li class="area04">경기<span>0&sol;0&sol;0</span></li>
+              <li class="area05">충북<span>0&sol;0&sol;0</span></li>
+              <li class="area06">충남<span>0&sol;0&sol;0</span></li>
+              <li class="area07">세종<span>0&sol;0&sol;0</span></li>
+              <li class="area08">대전<span>0&sol;0&sol;0</span></li>
+              <li class="area09">경북<span>0&sol;0&sol;0</span></li>
+              <li class="area10">경남<span>0&sol;0&sol;0</span></li>
+              <li class="area11">대구<span>0&sol;0&sol;0</span></li>
+              <li class="area12">울산<span>0&sol;0&sol;0</span></li>
+              <li class="area13">부산<span>0&sol;0&sol;0</span></li>
+              <li class="area14">전북<span>0&sol;0&sol;0</span></li>
+              <li class="area15">전남<span>0&sol;0&sol;0</span></li>
+              <li class="area16">광주<span>0&sol;0&sol;0</span></li>
+              <li class="area17">제주<span>0&sol;0&sol;0</span></li>
+            </ul>
+          </div>
+          <div class="count_wrap">
+            <table class="tbl_count">
+              <thead>
+                <tr>
+                  <th scope="col">구분</th>
+                  <th scope="col">건수</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">CBS</th>
+                  <td>5</td>
+                </tr>
+                <tr>
+                  <th scope="row">DMB</th>
+                  <td>5</td>
+                </tr>
+                <tr>
+                  <th scope="row">DITS</th>
+                  <td>5</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th scope="row">총계</th>
+                  <td>9</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>   
+  </div>
+</div>
+</body>
+</html>
+@@include('../inc/script.html') 
+
+<script>
+  initCtrlZoom();
+  function initCtrlZoom(){
+    $('.ctrl_zoom').prepend("<hr />");
+    $('.li_btn_zoom').each(function(){
+      $(this).children('li:first').addClass('on');
+    })
+  }
+  $('.li_btn_zoom').on('click','button',function(){
+    var getH = $(this).position().top + 10;
+    $(this).parents('.ctrl_zoom').find('hr').animate({height: getH},300,"linear");
+    $(this).parents('.li_btn_zoom').find('li').removeClass('on');
+    $(this).parent('li').addClass('on');
+  });
+
+  var data1 = [
+    {"th1":"자연재난","th2":"태풍","th3":"1"},
+    {"th1":"자연재난","th2":"태풍","th3":"1"},
+    {"th1":"사회재난","th2":"화재","th3":"1"},
+    {"th1":"자연재난","th2":"태풍","th3":"1"},
+    {"th1":"자연재난","th2":"태풍","th3":"1"},
+    {"th1":"사회재난","th2":"화재","th3":"1"},
+    {"th1":"자연재난","th2":"태풍","th3":"1"},
+    {"th1":"자연재난","th2":"태풍","th3":"1"},
+    {"th1":"자연재난","th2":"태풍","th3":"1"},
+    {"th1":"사회재난","th2":"화재","th3":"1"},
+    {"th1":"사회재난","th2":"화재","th3":"1"},
+  ];
+  $(function(){
+    $("#jqGrid").jqGrid({
+      data:data1,
+      datatype: "local",
+      colModel: [
+        { label: '구분', name: 'th1'},
+        { label: '재난유형', name: 'th2'},
+        { label: '송출건수', name: 'th3'}
+      ],
+      width:460,
+      height:270,
+      rowTotal:-1,
+      jsonReader : {repeatitems : false}                     
+    });
+  });
+</script>

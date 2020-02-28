@@ -1,0 +1,74 @@
+<div class="overlay" style="display:block;">
+  <div class="pop_wrap modal board" dataformat="modal">
+    <div class="pop_tit">
+      <h1>FAQ 등록</h1>
+      <button type="button" class="axi_only axi_cross" role="btn_close">닫기</button>      
+    </div>
+    <div class="pop_body">
+      <div class="tbl_wrap">
+        <table class="tbl_rowHead tbl_layout">
+          <colgroup>
+            <col width="145px" />
+            <col />
+            <col width="145px" />
+            <col />
+          </colgroup>
+          <tr>
+            <th scope="row"><label for="board_tit">제목</label></th>
+            <td colspan="3"><input type="text" id="board_tit" class="full" /></td>
+          </tr>
+          <tr>
+            <th scope="row">작성자</th>
+            <td colspan="3">관리자 (admin)</td>
+          </tr>
+          <tr>
+            <th scope="row"><label for="">첨부파일</label></th>
+            <td colspan="3">
+              <span class="file_wrap btn btn_blueline">
+                파일첨부
+                <input type="file" role="fileAdd" class="file_add">
+              </span>
+              <input type="text" id="" name="" class="file_text" readonly="" role="filePath" title="첨부폴더 경로" placeholder="사진파일 첨부" />              
+              <ul class="list_attach box_grayline">
+                <li>
+                  <span class="attach">첨부파일1</span>
+                  <button type="button" class="axi_only axi_del" title="삭제">삭제</button>
+                </li>
+                <li>
+                  <span class="attach">첨부파일1</span>
+                  <button type="button" class="axi_only axi_del" title="삭제">삭제</button>
+                </li>
+                <li>
+                  <span class="attach">첨부파일2첨부파일2첨부파일2첨부파일2첨부파일2첨부파일2첨부파일2첨부파일2첨부파일2첨부파일2첨부파일2첨부파일2첨부파일2첨부파일2첨부파일2</span>
+                  <button type="button" class="axi_only axi_del" title="삭제">삭제</button>
+                </li>                 
+              </ul>
+            </td>            
+          </tr>
+          <tr>
+            <th scope="row"><label for="faq_q">질문</label></th>
+            <td colspan="3">
+              <textarea name="" id="faq_q" cols="30" rows="3" class="full"></textarea>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row"><label for="faq_a">답변</label></th>
+            <td colspan="3">
+              <textarea name="" id="faq_a" cols="30" rows="13" class="full"></textarea>
+            </td>
+          </tr>
+        </table>
+      
+      </div>      
+    </div>
+    <div class="pop_footer">      
+      <div class="btn_area">
+        <span class="fr">
+          <button type="button" class="btn btn_blue">저장</button>
+          <button type="button" class="btn btn_gray">삭제</button>
+          <button type="button" class="btn btn_gray">목록</button>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>

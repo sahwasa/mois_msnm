@@ -1,0 +1,35 @@
+@@include('../inc/top.html')
+<body>
+<div class="wrap">
+  @@include('../inc/header.html')
+  <div class="cont">
+    @@include('../inc/location.html')
+    <div id="content" class="content min_width">
+      <div class="content_tit propagate cont_real">
+        <h1>팝업모음</h1>
+      </div>
+      <div class="content_body">
+      </div>
+    </div>
+    @@include('../inc/footer.html')
+  </div>
+</div>
+    @@include('../inc/loading.html') 
+    @@include('pop_sms_confirm.html')
+    @@include('pop_board_notice_list.html')
+    @@include('pop_board_notice_regist.html')
+    @@include('pop_board_notice_view.html')
+    @@include('pop_board_faq_list.html')
+    @@include('pop_board_faq_regist.html')
+    @@include('pop_board_faq_view.html')
+    @@include('pop_areaSelect.html')
+    @@include('pop_mmsSendStd.html')
+    @@include('pop_mmsSendStd_quake.html')
+</body>
+</html>
+@@include('../inc/script.html')
+<script>
+  // boardNoticeGrid();
+  // boardFAQGrid();
+  // citiesCheckEvt();
+</script>

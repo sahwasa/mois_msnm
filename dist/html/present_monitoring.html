@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="kr" dir="ltr">
+  <head>
+    <title>대국민 상황전파 - 행정안전부</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge, chrome=1" />
+    <link rel="icon" href="../img/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../plugins/axicon/axicon.min.css" />
+    <link rel="stylesheet" type="text/css" href="../plugins/jquery-ui/themes/redmond/jquery-ui.min.css" />
+    <link rel="stylesheet" type="text/css" href="../plugins/jqGrid/css/ui.jqgrid.css">
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="../css/style.css" />    
+    <link rel="stylesheet" href="../css/pop.css" />
+  </head>
+<body>
+<div class="wrap">
+  <!-- 바로가기 메뉴 -->
+<div id="accessibility">
+  <a href="#content">본문 바로가기</a>
+  <a href="#lnb">주메뉴 바로가기</a>
+</div>
+<hr />
+<!-- 바로가기 메뉴__e -->
+<div class="header min_width">
+  <h1 class="logo"><a href="">대국민 상황전파</a></h1>
+  <div class="fr gnb">
+    <ul class="gnb_list">
+      <li><b>홍길동</b>님 반갑습니다.</li>
+      <li class="divide"><button type="button" class="btn btn_blueline">로그아웃</button></li>
+      <!-- <li><button type="button" class="btn btn_gray">내정보</button></li>     -->
+      <li class="divide">
+        <ul class="gnb_link">
+          <li><button type="button">공지사항</button></li></li>
+          <li><button type="button">FAQ</button></li>
+          <li><button type="button" class="axia axi_newWin">NDMS</button></li>
+          <li><button type="button" class="axia axi_down">지침서</button></li>
+        </ul>
+    </ul>
+  </div>
+  <div id="lnb" class="lnb min_width">
+    <button type="button" class="btn_sitemap" toggle_sitemap>
+      <span>사이트맵</span>      
+    </button>
+    <ul class="nav lnb_list" role="navigation">
+      <li><a href="">대국민상황전파</a>
+        <ul class="sub">
+          <li><a href="">대국민상황전파(실제)</a></li>
+          <li><a href="">대국민상황전파(훈련)</a></li>
+          <li><a href="">대국민상황전파 현황</a>
+            <ul class="sub2">
+              <li><a href="">기관별 상황전파 현황</a></li>
+              <li><a href="">지역별 상황전파 현황</a></li>
+              <li><a href="">재난유형별 상황전파 현황</a></li>
+              <li><a href="">이동통신사 발송 리스트</a></li>
+              <li><a href="">연도별 상황전파 현황</a></li>
+              <li><a href="">월별 상황전파 현황</a></li>
+            </ul>
+          </li>
+          <li><a href="">연계현황</a>
+            <ul class="sub2">
+              <li><a href="">연계정보</a></li>
+              <li><a href="">기상특보</a></li>
+              <li><a href="">홍수예보</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><a href="">시스템 소개</a>
+        <ul class="sub">
+          <li><a href="">시스템개요</a></li>
+          <li><a href="">CBS 소개</a></li>
+          <li><a href="">DMB 소개</a></li>
+          <li><a href="">DITS 소개</a></li>
+        </ul>
+      </li>
+      <li><a href="">게시판</a>
+        <ul class="sub">
+          <li><a href="">공지사항</a></li>
+          <li><a href="">Q&amp;A</a></li>
+        </ul>
+      </li>
+      <li><a href="">상황전파 현황</a>
+        <ul class="sub">
+          <li><a href="">실시간 상황판</a></li>
+          <li><a href="">시스템 현황</a></li>
+          <li><a href="">상황실 모니터링</a></li>
+          <li><a href="">재난 예경보 송출현황</a></li>
+        </ul>
+      </li>
+      <li><a href="">환경설정</a>
+        <ul class="sub">
+          <li><a href="">표준 문안관리</a></li>
+          <li><a href="">자동상황전파 규칙관리</a></li>
+          <li><a href="">지역그룹관리</a></li>
+          <li><a href="">사용자 접속이력</a></li>
+          <li><a href="">사용자 로그아웃이력</a></li>
+          <li><a href="">월별 &sol; 기관별 사용자</a></li>
+          <li><a href="">일별 &sol; 기관별 사용자</a></li>
+        </ul>
+      </li>
+      <li><a href="">시스템관리</a>
+        <ul class="sub">
+          <li><a href="">코드관리</a></li>
+          <li><a href="">기관관리</a></li>
+          <li><a href="">지역관리</a></li>
+          <li><a href="">기상특보예보구역관리</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div> 
+</div>
+
+
+  <div class="cont">
+    <div class="location min_width">
+  <!-- <img src="../img/temp/temp_location.jpg" alt=""> -->
+  <ul class="location_list">
+    <li><a href="">HOME</a></li>
+    <li>대국민상황전파
+      <ul class="sub_loc">
+        <li><a href="">대국민상황전파</a></li>
+        <li><a href="">시스템소개</a></li>
+        <li><a href="">게시판</a></li>
+        <li><a href="">상황전파 현황</a></li>
+      </ul>
+    </li>
+    <li>대국민상황전파 현황
+      <ul class="sub_loc">
+        <li><a href="">대국민상황전파(실제)</a></li>
+        <li><a href="">대국민상황전파(훈련)</a></li>
+        <li><a href="">대국민상황전파 현황</a></li>
+        <li><a href="">연계현황</a></li>
+        <li><a href="">실시간 상황판</a></li>
+        <li><a href="">환경설정</a></li>
+        <li><a href="">시스템관리</a></li>
+      </ul>
+    </li>
+    <li>기관별 상황전파 현황
+      <ul class="sub_loc">
+        <li><a href="">기관별 상황전파 현황</a></li>
+        <li><a href="">지역별 상황전파 현황</a></li>
+        <li><a href="">재난유형별 상황전파 현황</a></li>
+        <li><a href="">이동통신사 발송 리스트</a></li>
+        <li><a href="">연도별 상황전파 현황</a></li>
+        <li><a href="">월별 상황전파 현황</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>
+<div id="dockArea" class="mdi min_width">
+  <ul class="mdi_list">
+    <li><input type="button" framectrl="1" value="대국민상황전파 등록화면"><button type="button" class="close" framectrl = "close">닫기</button></li>
+    <li><input type="button" framectrl="2" value="대국민상황전파 리스트"><button type="button" class="close" framectrl = "close">닫기</button></li>
+  </ul>
+</div>
+    <div id="content" class="content min_width">
+      <div class="content_tit">
+        <h1>상황실 모니터링 </h1>
+      </div>
+      <div class="content_body present_monitoring">
+        <div class="fl section divide">
+          <div class="article">
+            <div class="article_tit">
+              <h2>상황전파 현황</h2>
+              <span class="fr">
+                <button class="btn_more">더보기</button>
+              </span>
+            </div>
+            <div class="article_body tbl_wrap">
+              <table id="jqGrid" class="jq-grid"></table>
+              <div id="jqGridPager"></div>
+            </div>
+          </div>
+          <div class="article">
+            <div class="article_tit">
+              <h2>대국민 상황전파 (전송시스템)사용법</h2>
+            </div>
+            <div class="article_body box_t_db">
+              <ul class="list_num_only">
+                <li>자연&sol;사회재난의 경우 기상청과 홍수통제소로부터</li>
+                <li>자연&sol;사회재난의 경우 기상청과 홍수통제소로부터</li>
+                <li>자연&sol;사회재난의 경우 기상청과 홍수통제소로부터</li>
+                <li>자연&sol;사회재난의 경우 기상청과 홍수통제소로부터</li>
+                <li>자연&sol;사회재난의 경우 기상청과 홍수통제소로부터</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="fr section">
+          <div class="article access_status">
+            <div class="article_tit">
+              <h2>연계 접속상태(송신)</h2>
+              <span class="fr">
+                <i class="t_mark_legend mark_green">정상</i>
+                <i class="t_mark_legend mark_red">연결실패</i>
+              </span>
+            </div>
+            <div class="article_body">
+              <div class="tbl_wrap">
+                <table class="tbl_layout">
+                  <tr>
+                    <th scope="col" width="197px">DTS 접속상태</th>
+                    <th><button type="button" class="axi_only axi_bell">알람</button></th>
+                  </tr>
+                  <tr>
+                    <td>과기부(EDBS) 서버</td>
+                    <td><i class="t_mark mark_green">정상</i></td>
+                  </tr>
+                </table>
+              </div>
+              <div class="tbl_wrap">
+                <table class="tbl_layout">
+                  <tr>
+                    <th scope="col" width="197px">CBS(EWS) 접속상태</th>
+                    <th><button type="button" class="axi_only axi_bellOff">알람거부</button></th>
+                  </tr>
+                  <tr>
+                    <td>CBS1(2G)</td>
+                    <td><i class="t_mark mark_green">정상</i></td>
+                  </tr>
+                  <tr>
+                    <td>KT 서버(LTE)</td>
+                    <td><i class="t_mark mark_red">연결실패</i></td>
+                  </tr>
+                  <tr>
+                    <td>LGU+ 서버(LTE)</td>
+                    <td><i class="t_mark mark_green">정상</i></td>
+                  </tr>
+                  <tr>
+                    <td>SKT 서버(LTE)</td>
+                    <td><i class="t_mark mark_green">정상</i></td>
+                  </tr>
+                </table>
+              </div>
+              <div class="tbl_wrap">
+                <table class="tbl_layout">
+                  <tr>
+                    <th scope="col" width="197px">DTS 접속상태</th>
+                    <th><button type="button" class="axi_only axi_bell">알람</button></th>
+                  </tr>
+                  <tr>
+                    <td>SBS 서버</td>
+                    <td><i class="t_mark mark_green">정상</i></td>
+                  </tr>
+                  <tr>
+                    <td>KBS 서버</td>
+                    <td><i class="t_mark mark_green">정상</i></td>
+                  </tr>
+                  <tr>
+                    <td>MBC 서버</td>
+                    <td><i class="t_mark mark_green">정상</i></td>
+                  </tr>
+                  <tr>
+                    <td>YTN 서버</td>
+                    <td><i class="t_mark mark_green">정상</i></td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>                
+      </div>
+    </div>
+    <div class="footer min_width"> 
+  <div class="copy_wrap">
+    <h1>
+      <a href="http://www.mois.go.kr" target="_blank0">행정안전부</a>
+    </h1>
+    <p class="addr">
+      세종특별자치시 다솜2로 94 정부세종청사 <b>재난상황실 (044) 120</b>
+    </p>
+    <p class="copyright">
+      Cppyright ⓒ 2020 행정안전부. All rights Reserved.
+    </p>
+  </div>
+</div> 
+  </div>
+
+  <div class="overlay" style="display:block;">
+  <div class="pop_wrap modal request_alert" dataformat="modal">
+    <div class="pop_tit">
+      <h1>승인 요청 알림</h1>
+      <button type="button" class="axi_only axi_cross" role="btn_close">취소</button>      
+    </div>
+    <div class="pop_body">
+      <ul class="list_num_only">
+        <li>2019.12.01 14:00 &sol; 기상청 &sol; 풍랑경보 연장<button type="button" class="btn btn_blueline">바로가기</button></li>
+        <li>2019.12.01 13:50 &sol; 기상청 &sol; 한파경보 발표<button type="button" class="btn btn_blueline">바로가기</button></li>
+        <li>2019.12.01 13:30 &sol; 기상청 &sol; 강풍경보 발표<button type="button" class="btn btn_blueline">바로가기</button></li>
+      </ul>      
+    </div>
+  </div>
+</div>
+</div>
+</body>
+</html>
+<script src="../plugins/jquery/dist/jquery.min.js"></script>
+<script src="../plugins/jquery-ui/jquery-ui.min.js"></script>
+<script src="../plugins/jquery-ui/ui/i18n/datepicker-ko.js" type="text/javascript"></script>
+<script src="../plugins/jqGrid/js/jquery.jqGrid.min.js" type="text/javascript"></script>
+<script src="../plugins/jqGrid/js/i18n/grid.locale-kr.js" type="text/javascript"></script>
+<script src="../js/ui_common.js"></script> 
+<script>
+  var data1 = [
+    {"status":"new","th1":"산사태 주의단계","th2":"2020-01-10 12:34:56","th3":"행정안전부","th4":"기상특보","th5":"미승인","th6":"완료","th7":"CBS","th8":"DMB","th9":"DITS"},
+    {"status":"delay","th1":"산사태 주의단계","th2":"2020-01-10 12:34:56","th3":"행정안전부","th4":"기상특보","th5":"미승인","th6":"완료","th7":"CBS","th8":"","th9":"DITS"},
+    {"status":"today","th1":"산사태 주의단계","th2":"2020-01-10 12:34:56","th3":"행정안전부","th4":"기상특보","th5":"미승인","th6":"완료","th7":"CBS","th8":"DMB","th9":""},
+    {"status":"","th1":"산사태 주의단계","th2":"2020-01-10 12:34:56","th3":"행정안전부","th4":"기상특보","th5":"미승인","th6":"완료","th7":"CBS","th8":"DMB","th9":""},
+  ];
+  $(function(){
+    var grid1 = $("#jqGrid")
+    grid1.jqGrid({
+      data:data1,
+      datatype: "local",
+      colModel: [
+        {name : 'status', hidden:true},
+        { label: '제목', name: 'th1', align:'left', cellattr: function () { return " class='t_tag_area'" }},
+        { label: '수신일시', name: 'th2',  width:90},
+        { label: '발송기관', name: 'th3',  width:70},
+        { label: '자료구분', name: 'th4',  width:50},
+        { label: '결과', name: 'th5',  width:40},
+        { label: '전송', name: 'th6',  width:40},
+        {label:'CBS', name: 'th7',  width:40, colspan:3},
+        {label:'DMB', name: 'th8',  width:40, colspan:3},
+        {label:'DITS', name: 'th9',  width:40, colspan:3}
+      ],
+      height:260,
+      rowTotal:-1,
+      rowNum:10,
+      rownumbers: true,
+      rownumWidth: 25,
+      pager: "#jqGridPager",
+      jsonReader : {repeatitems : false},
+      loadComplete : function(idx, rowId){
+        var rowIds = $(this).jqGrid('getDataIDs');
+        $.each(
+          rowIds, function(idx,rowId){
+            var rowData = grid1.getRowData(rowId),
+                state = "";
+            switch (rowData.status) {
+              case "new":
+                state = "t_tag t_new"
+                break;
+              case "delay":
+                state = "t_tag t_delay"          
+                break;      
+              case "today":
+                state = "t_tag t_today"
+                break;
+              default:
+                state = "t_tag"
+                break;
+            }
+            grid1.jqGrid('setRowData', rowId, false, state);
+          }
+        )
+      }     
+    })
+    .setGroupHeaders({
+      useColSpanStyle: true,
+      groupHeaders: [
+        { "numberOfColumns": 3, "titleText":"전파매체", "startColumnName": "th7"}]
+    });
+     // 페이지 사이즈에 맞게 그리드 넓이를 불러오는 함수입니다.
+    // ui_common.js에 위치합니다.
+    jqgridInit();
+  });
+</script>
+

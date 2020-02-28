@@ -1,0 +1,194 @@
+@@include('../inc/top.html')
+<body>
+  <div class="content_tit">
+    <h1>대국민상황전파(실제)<b>목록</b></h1>
+  </div>
+  <div class="content_body">
+    <div class="search">
+      <ul class="use_grid divide12">
+        <li class="w3"><label for="">기간</label>
+          <span class="period period_multi">
+            <input type="text" class="from date" name="date1" role="from">
+            <input type="text" class="to date" name="date1" role="to">
+          </span>
+        </li>
+        <li class="w3"><label for="">재난유형</label>
+          <select name="" id="" title="재난유형 대분류"><option value="">전체</option></select>
+          <select name="" id="" title="재난유형 상세분류"><option value="">선택</option></select>
+        </li>
+        <li class="w3"><label for="">작성기관</label>
+          <select name="" id="" title="기관유형"><option value="">기관유형</option></select>
+          <select name="" id="" title="기관선택"><option value="">선택</option></select>
+        </li>
+        <li class="w3">
+          <span class="label">전파매체</span>
+          <span class="check_wrap">
+            <label for="CBS"><input type="checkbox" id="CBS">CBS</label>
+            <label for="DMB"><input type="checkbox" id="DMB">DMB</label>
+            <label for="DITS"><input type="checkbox" id="DITS">DITS</label>
+          </span>
+        </li>
+        <li class="w3"><label for="">자동&sol;수동</label>
+          <select name="" id="" title="기관선택"><option value="">선택</option></select>
+        </li>
+        <li class="w6"><label for="">제목</label>
+          <input type="text" />
+        </li>
+      </ul>
+      <div class="search_areaB">
+        <button type="button" class="btn btn_blue">조회</button>
+        <button type="button" class="btn_ico btn_excel">엑셀</button>
+      </div>
+    </div>
+    <div class="tbl_areaT">
+      <span class="count">
+        전체 <b class="t_blue">123</b>건
+      </span>
+    </div>
+    <div class="tbl_wrap">
+      <table id="jqGrid" class="jq-grid"></table>
+      <div id="jqGridPager"></div>
+      <!-- <table class="tbl_default">
+        <caption>대국민상황전파실제 내용</caption>
+        <thead>
+          <tr>
+            <th scope="col" rowspan="3" width="50">번호</th>
+            <th scope="col" rowspan="3">제목</th>
+            <th scope="col" colspan="2" class="th_1deps">승인요청</th>
+            <th scope="col" colspan="4" class="th_1deps">승인&sol;전송</th>
+            <th scope="col" colspan="3" class="th_1deps">전파매체</th>
+          </tr>
+          <tr class="th_2deps">
+            <th scope="col" width="120">요청일시</th>
+            <th scope="col" width="120">요청자</th>
+            <th scope="col" width="120">승일일시</th>
+            <th scope="col" width="120">승인자</th>
+            <th scope="col" width="120">전송상태</th>
+            <th scope="col" width="120">완료일시</th>
+            <th scope="col" width="50">CBS</th>
+            <th scope="col" width="50">DMB</th>
+            <th scope="col" width="50">DITS</th>
+          </tr>
+          <tr>
+            <th>3deps</th>
+            <th>3deps</th>
+            <th>3deps</th>
+            <th>3deps</th>
+            <th>3deps</th>
+            <th>3deps</th>
+            <th>3deps</th>
+            <th>3deps</th>
+            <th>3deps</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td class="alignL">산사태 주의단계</td>
+            <td>2020-01-10 12:34:56</td>
+            <td>행정안전부 &sol; 홍길동</td>
+            <td>2020-02-10 12:34:56</td>
+            <td>행정안전부 &sol; 홍길동</td>
+            <td><span class="t_green">승인요청중</span></td>
+            <td>2020-02-10 12:34:56</td>
+            <td>CBS</td>
+            <td>DMB</td>
+            <td>DITS</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td class="alignL">산사태 주의단계</td>
+            <td>2020-01-10 12:34:56</td>
+            <td>행정안전부 &sol; 홍길동</td>
+            <td>2020-02-10 12:34:56</td>
+            <td>행정안전부 &sol; 홍길동</td>
+            <td><span class="t_mint">전송완료</span></td>
+            <td>2020-02-10 12:34:56</td>
+            <td>CBS</td>
+            <td>DMB</td>
+            <td>DITS</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td class="alignL">산사태 주의단계</td>
+            <td>2020-01-10 12:34:56</td>
+            <td>행정안전부 &sol; 홍길동</td>
+            <td>2020-02-10 12:34:56</td>
+            <td>행정안전부 &sol; 홍길동</td>
+            <td><span class="t_wine">반려</span></td>
+            <td>2020-02-10 12:34:56</td>
+            <td>CBS</td>
+            <td>DMB</td>
+            <td>DITS</td>
+          </tr>
+        </tbody>
+      </table> -->
+    </div>
+    <!-- <div class="tbl_areaB">
+      @@include('../inc/paginate.html')
+    </div>         -->
+  </div>
+</body>
+</html>
+@@include('../inc/script.html') 
+
+<script>
+  var data1 = [
+    {"th1":"산사태 주의단계","th2":"2020-01-10 12:34:56","th3":"행정안전부 / 홍길동","th4":"2020-01-10 12:34:56","th5":"행정안전부 / 홍길동","th6":"전송완료","th7":"2020-01-10 12:34:56","th8":"CBS","th9":"DMB","th10":"DITS"},    
+    {"th1":"산사태 주의단계","th2":"2020-01-10 12:34:56","th3":"행정안전부 / 홍길동","th4":"2020-01-10 12:34:56","th5":"행정안전부 / 홍길동","th6":"승인요청중","th7":"2020-01-10 12:34:56","th8":"CBS","th9":"DMB","th10":"DITS"},    
+    {"th1":"산사태 주의단계","th2":"2020-01-10 12:34:56","th3":"행정안전부 / 홍길동","th4":"2020-01-10 12:34:56","th5":"행정안전부 / 홍길동","th6":"반려","th7":"2020-01-10 12:34:56","th8":"CBS","th9":"DMB","th10":"DITS"}
+  ];
+  $(function(){
+    $("#jqGrid").jqGrid({
+      data:data1,
+      datatype: "local",
+      colModel: [
+        { label: '제목', name: 'th1'},
+        { label: '요청일시', name: 'th2',  width:100},
+        { label: '요청자', name: 'th3',  width:100},
+        { label: '승인일시', name: 'th4',  width:100},
+        { label: '승인자', name: 'th5',  width:100},
+        { label: '전송상태', name: 'th6',  width:50, formatter:mk_status},
+        { label: '완료일시', name: 'th7',  width:100},
+        { label: 'CBS', name: 'th8',  width:40},
+        { label: 'DMB', name: 'th9',  width:40},
+        { label: 'DITS', name: 'th10',  width:40},
+      ],
+      height:260,
+      rowTotal:-1,
+      rowNum:10,
+      rownumbers: true,
+      rownumWidth: 25,
+      pager: "#jqGridPager",
+      jsonReader : {repeatitems : false}                     
+    })
+    .setGroupHeaders({
+      useColSpanStyle: true,
+      groupHeaders: [
+        { "numberOfColumns": 2, "titleText":"승인요청", "startColumnName": "th2" },
+        { "numberOfColumns": 4, "titleText":"승인/전송", "startColumnName": "th4" },
+        { "numberOfColumns": 3, "titleText":"전송매체", "startColumnName": "th8" }]
+    });
+    function mk_status(cellValue, options, rowdata, action){
+      var html, status;
+
+      switch (cellValue) {
+        case "전송완료":
+          status = "t_mint"
+          break;
+        case "반려":
+          status = "t_wine"          
+          break;      
+        default:
+          status = "t_green"
+          break;
+      }
+
+      html = '<span class="'+ status +'">'+ cellValue +'</a>';
+      return html;
+    }
+     // 페이지 사이즈에 맞게 그리드 넓이를 불러오는 함수입니다.
+    // ui_common.js에 위치합니다.
+    jqgridInit();
+  });
+</script>

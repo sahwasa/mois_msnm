@@ -1,0 +1,189 @@
+@@include('../inc/top.html')
+<body>
+<div class="wrap">
+  @@include('../inc/header.html')
+  <div class="cont">
+    @@include('../inc/location.html')
+    <div id="content" class="content min_width">
+      <div class="content_tit">
+        <h1>상황실 모니터링 </h1>
+      </div>
+      <div class="content_body present_monitoring">
+        <div class="fl section divide">
+          <div class="article">
+            <div class="article_tit">
+              <h2>상황전파 현황</h2>
+              <span class="fr">
+                <button class="btn_more">더보기</button>
+              </span>
+            </div>
+            <div class="article_body tbl_wrap">
+              <table id="jqGrid" class="jq-grid"></table>
+              <div id="jqGridPager"></div>
+            </div>
+          </div>
+          <div class="article">
+            <div class="article_tit">
+              <h2>대국민 상황전파 (전송시스템)사용법</h2>
+            </div>
+            <div class="article_body box_t_db">
+              <ul class="list_num_only">
+                <li>자연&sol;사회재난의 경우 기상청과 홍수통제소로부터</li>
+                <li>자연&sol;사회재난의 경우 기상청과 홍수통제소로부터</li>
+                <li>자연&sol;사회재난의 경우 기상청과 홍수통제소로부터</li>
+                <li>자연&sol;사회재난의 경우 기상청과 홍수통제소로부터</li>
+                <li>자연&sol;사회재난의 경우 기상청과 홍수통제소로부터</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="fr section">
+          <div class="article access_status">
+            <div class="article_tit">
+              <h2>연계 접속상태(송신)</h2>
+              <span class="fr">
+                <i class="t_mark_legend mark_green">정상</i>
+                <i class="t_mark_legend mark_red">연결실패</i>
+              </span>
+            </div>
+            <div class="article_body">
+              <div class="tbl_wrap">
+                <table class="tbl_layout">
+                  <tr>
+                    <th scope="col" width="197px">DTS 접속상태</th>
+                    <th><button type="button" class="axi_only axi_bell">알람</button></th>
+                  </tr>
+                  <tr>
+                    <td>과기부(EDBS) 서버</td>
+                    <td><i class="t_mark mark_green">정상</i></td>
+                  </tr>
+                </table>
+              </div>
+              <div class="tbl_wrap">
+                <table class="tbl_layout">
+                  <tr>
+                    <th scope="col" width="197px">CBS(EWS) 접속상태</th>
+                    <th><button type="button" class="axi_only axi_bellOff">알람거부</button></th>
+                  </tr>
+                  <tr>
+                    <td>CBS1(2G)</td>
+                    <td><i class="t_mark mark_green">정상</i></td>
+                  </tr>
+                  <tr>
+                    <td>KT 서버(LTE)</td>
+                    <td><i class="t_mark mark_red">연결실패</i></td>
+                  </tr>
+                  <tr>
+                    <td>LGU+ 서버(LTE)</td>
+                    <td><i class="t_mark mark_green">정상</i></td>
+                  </tr>
+                  <tr>
+                    <td>SKT 서버(LTE)</td>
+                    <td><i class="t_mark mark_green">정상</i></td>
+                  </tr>
+                </table>
+              </div>
+              <div class="tbl_wrap">
+                <table class="tbl_layout">
+                  <tr>
+                    <th scope="col" width="197px">DTS 접속상태</th>
+                    <th><button type="button" class="axi_only axi_bell">알람</button></th>
+                  </tr>
+                  <tr>
+                    <td>SBS 서버</td>
+                    <td><i class="t_mark mark_green">정상</i></td>
+                  </tr>
+                  <tr>
+                    <td>KBS 서버</td>
+                    <td><i class="t_mark mark_green">정상</i></td>
+                  </tr>
+                  <tr>
+                    <td>MBC 서버</td>
+                    <td><i class="t_mark mark_green">정상</i></td>
+                  </tr>
+                  <tr>
+                    <td>YTN 서버</td>
+                    <td><i class="t_mark mark_green">정상</i></td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>                
+      </div>
+    </div>
+    @@include('../inc/footer.html') 
+  </div>
+
+  @@include('pop_requests_alert.html')
+</div>
+</body>
+</html>
+@@include('../inc/script.html') 
+<script>
+  var data1 = [
+    {"status":"new","th1":"산사태 주의단계","th2":"2020-01-10 12:34:56","th3":"행정안전부","th4":"기상특보","th5":"미승인","th6":"완료","th7":"CBS","th8":"DMB","th9":"DITS"},
+    {"status":"delay","th1":"산사태 주의단계","th2":"2020-01-10 12:34:56","th3":"행정안전부","th4":"기상특보","th5":"미승인","th6":"완료","th7":"CBS","th8":"","th9":"DITS"},
+    {"status":"today","th1":"산사태 주의단계","th2":"2020-01-10 12:34:56","th3":"행정안전부","th4":"기상특보","th5":"미승인","th6":"완료","th7":"CBS","th8":"DMB","th9":""},
+    {"status":"","th1":"산사태 주의단계","th2":"2020-01-10 12:34:56","th3":"행정안전부","th4":"기상특보","th5":"미승인","th6":"완료","th7":"CBS","th8":"DMB","th9":""},
+  ];
+  $(function(){
+    var grid1 = $("#jqGrid")
+    grid1.jqGrid({
+      data:data1,
+      datatype: "local",
+      colModel: [
+        {name : 'status', hidden:true},
+        { label: '제목', name: 'th1', align:'left', cellattr: function () { return " class='t_tag_area'" }},
+        { label: '수신일시', name: 'th2',  width:90},
+        { label: '발송기관', name: 'th3',  width:70},
+        { label: '자료구분', name: 'th4',  width:50},
+        { label: '결과', name: 'th5',  width:40},
+        { label: '전송', name: 'th6',  width:40},
+        {label:'CBS', name: 'th7',  width:40, colspan:3},
+        {label:'DMB', name: 'th8',  width:40, colspan:3},
+        {label:'DITS', name: 'th9',  width:40, colspan:3}
+      ],
+      height:260,
+      rowTotal:-1,
+      rowNum:10,
+      rownumbers: true,
+      rownumWidth: 25,
+      pager: "#jqGridPager",
+      jsonReader : {repeatitems : false},
+      loadComplete : function(idx, rowId){
+        var rowIds = $(this).jqGrid('getDataIDs');
+        $.each(
+          rowIds, function(idx,rowId){
+            var rowData = grid1.getRowData(rowId),
+                state = "";
+            switch (rowData.status) {
+              case "new":
+                state = "t_tag t_new"
+                break;
+              case "delay":
+                state = "t_tag t_delay"          
+                break;      
+              case "today":
+                state = "t_tag t_today"
+                break;
+              default:
+                state = "t_tag"
+                break;
+            }
+            grid1.jqGrid('setRowData', rowId, false, state);
+          }
+        )
+      }     
+    })
+    .setGroupHeaders({
+      useColSpanStyle: true,
+      groupHeaders: [
+        { "numberOfColumns": 3, "titleText":"전파매체", "startColumnName": "th7"}]
+    });
+     // 페이지 사이즈에 맞게 그리드 넓이를 불러오는 함수입니다.
+    // ui_common.js에 위치합니다.
+    jqgridInit();
+  });
+</script>
+
