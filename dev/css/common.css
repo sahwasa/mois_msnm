@@ -6,7 +6,7 @@
 /* Reset */
 *{margin:0;padding:0;}
 body,h1,h2,h3,h4,h5,h6,th,td,input,select,textarea,ul,li,dl,dt,dd,button,p,a{color:#333;font-family:"Malgun Gothic","맑은고딕","AppleSDGothic","Nanum Barun Gothic","NanumGothic","AppleGothic","Dotum","Arial",sans-serif;font-size:12px;font-weight:normal;word-spacing:.5px;}
-body,html{width:100%;height:100%;text-align:center;-webkit-text-size-adjust:none;background:#fff;overflow-y:hiiden;}
+body,html{width:100%;height:100%;text-align:center;-webkit-text-size-adjust:none;background:#fff;}
 b{font-weight:600;}
 h1,h2,h3,h4,h5,h6{display:inline-block;box-sizing:border-box;width:auto;}
 ul,ol,li{box-sizing:border-box;list-style:none;}
