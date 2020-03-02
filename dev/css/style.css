@@ -322,6 +322,18 @@ table .th_2deps,
 
 .page_areaB{width:100%;margin-top:18px;overflow:hidden;}
 
+.gis_wrap .tit{background-color:#385d9e;padding-left:10px;}
+.gis_wrap .tit h2{color:#fff;line-height:35px;}
+.gis_wrap .tit .fr{width:421px;height:35px;background-color: #fff;border:1px solid #a7b5bc;border-left-width:0;padding:0 5px;text-align:right;line-height:32px;line-height:31px\0;}
+.gis_wrap .tit .axib{line-height:22px;padding:0 9px;}
+.gis_wrap .tit .axib::before{color:#f8635b;vertical-align:middle;}
+.gis_wrap .tit .axi_squCheck_off::before{color:#385d9e;}
+.gis_wrap .body{display:flex;justify-content:space-between;min-height:520px;border:1px solid #a7b5bc;border-top-width:0;overflow:hidden;}
+.gis_wrap .body .section{flex:0 1 auto;padding:5px;}
+.gis_wrap .body .area_list{width:calc(100% - 420px);border-right:1px solid #a7b5bc;padding-right:0;}
+.gis_wrap .body .area_list li{width:100%;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;}
+.gis_wrap .body .gis_area{width:420px;}
+
 .map_wrap .tit{background-color:#385d9e;padding-left:10px;}
 .map_wrap .tit h2{color:#fff;line-height:35px;}
 .map_wrap .tit .fr{width:421px;height:35px;background-color: #fff;border:1px solid #a7b5bc;border-left-width:0;padding:0 5px;text-align:right;line-height:32px;line-height:31px\0;}

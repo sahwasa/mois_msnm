@@ -1,146 +1,149 @@
 @@include('../inc/top.html')
 <body>
   <!-- 실제 : cont_real / 훈련 : cont_practice -->
-  <div class="content_tit propagate cont_real">
-    <h1>대국민상황전파(실제)<b>등록(수정)</b></h1>
-    <span class="msg">실제발송되는 메뉴입니다. 훈련 및 테스트는 불가합니다.</span>
-  </div>
-  <div class="content_body">
-    <div class="propagate01_cm">
-      <div class="section fl">
-        <div class="tbl_wrap">
-          <table class="tbl_rowHead tbl_ipt">
-            <caption>대국민상황전파(실제) 상세</caption>
-            <tr>
-              <th scope="row" colspan="3"><label for="">제목</label></th>
-              <td><input type="text" class="full" value="기상특보 호우경보 발표" /></td>
-            </tr>
-            <tr>
-              <th scope="row" colspan="3">통합재난유형</th>
-              <td>
-                <select name="" id=""><option value="">자연재난</option></select>
-                <select name="" id=""><option value="">기상특보</option></select>
-                <select name="" id=""><option value="">호우</option></select>
-                <select name="" id=""><option value="">경보</option></select>
-                <select name="" id=""><option value="">발표</option></select>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row" colspan="3">전파매체</th>
-              <td>
-                <span class="check_wrap">
-                <label for="CBS"><input type="checkbox" id="CBS">CBS</label>
-                <label for="DMB"><input type="checkbox" id="DMB">DMB</label>
-                <label for="DITS"><input type="checkbox" id="DITS">DITS</label>
-                </span>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row" colspan="3">대상지역</th>
-              <td>강원도(전체), 경상북도(전체)</td>
-            </tr>
-            <tr>              
-              <th scope="row" rowspan="4" width="40px;">CBS</th>
-              <th scope="row" colspan="2">재난유형</th>
-              <td>
-                <select name="" id=""><option value="">자연재난</option></select>
-                <select name="" id=""><option value="">호우</option></select>
-                <select name="" id=""><option value="">경보</option></select>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row" colspan="2">발송채널</th>
-              <td><select name="" id=""><option value="">안전안내문자 (채널:0000)</option></select></td>
-            </tr>
-            <tr>
-              <th scope="row" rowspan="2" class="th_default" width="40px;">메시지</th>
-              <th scope="row" width="25px;">2G</th>
-              <td>
-                <textarea name="" id="" cols="30" rows="2" class="full">[행정안전부] 오늘 00시 강원, 경북 지역 호우경보, 산사태·상습침수 등 위험지역 대피, 외출자제 등 안전에 주의바랍니다.</textarea>
-                <span class="info_size"><b>55</b>&sol;<b>110</b>Byte</span>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">4G</th>
-              <td><textarea name="" id="" cols="30" rows="2" class="full">[행정안전부] 오늘 00시 강원, 경북 지역 호우경보, 산사태·상습침수 등 위험지역 대피, 외출자제 등 안전에 주의바랍니다.</textarea>
-                <span class="info_size"><b>55</b>&sol;<b>110</b>Byte</span>
-              </td>
-            </tr>
-            <tr>              
-              <th scope="row" rowspan="2">DMBS</th>
-              <th scope="row" colspan="2">재난유형</th>
-              <td>
-                <select name="" id=""><option value="">자연재난</option></select>
-                <select name="" id=""><option value="">호우경보</option></select>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row" colspan="2">메시지</th>
-              <td><textarea name="" id="" cols="30" rows="" class="full">오늘 00시 강원, 경북 지역 호우경보, 산사태·상습침수 등 위험지역 대피, 외출자제 등 안전에 주의바랍니다. [행정안전부]</textarea>
-                <span class="info_size"><b>55</b>&sol;<b>110</b>Byte</span>
-              </td>
-            </tr>
-            <tr>              
-              <th scope="row" rowspan="3">DMBS</th>
-              <th scope="row" colspan="2">재난유형</th>
-              <td>
-                <select name="" id=""><option value="">자연재난</option></select>
-                <select name="" id=""><option value="">호우경보발표</option></select>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row" colspan="2">발표지역</th>
-              <td><input type="text" class="full" value="강원(전체), 경북(전체)"></td>
-            </tr>
-            <tr>
-              <th scope="row" colspan="2">메시지</th>
-              <td>
-                <textarea name="" id="" cols="30" rows="5" class="full" style="height:98px">1. 방송통신발전기본법 제40조(재난방송)와 관련하여
-2. 오늘 00시 호우경보가 발효됨에 따라 위 법령에 의거 아래와 같이 재난방송을 요청하오니 국민들이 경각심을 갖고 미리 대비할 수 있도록 자막표출 등 재난방송을 실시하여 주시기 바랍니다.
-[ 방송문안]
-- 오늘 00시 강원, 경북 지역에 호우경보가 발효되었습니다.
-- 집중호우시 인명피해가 많이 발생하고 있는 물에 잠긴 도로나 소규모 교량
-                </textarea>
-                <span class="info_size"><b>55</b>&sol;<b>110</b>Byte</span>
-              </td>
-            </tr>             
-          </table>
-        </div>
-      </div>
-      <div class="section fr">
-        <div class="gis_wrap">
-          <div class="tit">
-            <h2>발송대상지역</h2>
-            <span class="fr">
-              <button type="button" class="axib axi_squCheck">전체선택</button>
-              <button type="button" class="axib axi_squCheck_off">선택해제</button>
-              <button type="button" class="axib axi_squCheck">지역선택</button>
-            </span>
-          </div>
-          <div class="body">
-            <div class="section area_list">
-              <ul>
-                <li><label for="a1"><input type="checkbox" id="a1" />세종특별자치시</label></li>
-                <li><label for="a2"><input type="checkbox" id="a2" />구로구</label></li>
-              </ul>
-            </div>
-            <div class="section gis_area">
-              <img src="http://placehold.it/410x520" alt="">
-            </div>
-          </div>
-        </div>
-      </div>
+  <div id="mdiWrap" class="mdi_wrap" name="mdiWrap">
+    <div class="content_tit propagate cont_real">
+      <h1>대국민상황전파(실제)<b>등록(수정)</b></h1>
+      <span class="msg">실제발송되는 메뉴입니다. 훈련 및 테스트는 불가합니다.</span>
     </div>
-    <div class="page_areaB">
-      <span class="fr">
-        <button type="button" class="btn btn_red">임시저장</button>
-        <button type="button" class="btn btn_red">승인요청</button>
-        <button type="button" class="btn btn_red">승인&sol;전송</button>
-        <button type="button" class="btn btn_red">반려</button>
-        <button type="button" class="btn btn_blue">목록</button>
-      </span>
-    </div>        
+    <div class="content_body">
+      <div class="propagate01_cm">
+        <div class="section fl">
+          <div class="tbl_wrap">
+            <table class="tbl_rowHead tbl_ipt">
+              <caption>대국민상황전파(실제) 상세</caption>
+              <tr>
+                <th scope="row" colspan="3"><label for="">제목</label></th>
+                <td><input type="text" class="full" value="기상특보 호우경보 발표" /></td>
+              </tr>
+              <tr>
+                <th scope="row" colspan="3">통합재난유형</th>
+                <td>
+                  <select name="" id=""><option value="">자연재난</option></select>
+                  <select name="" id=""><option value="">기상특보</option></select>
+                  <select name="" id=""><option value="">호우</option></select>
+                  <select name="" id=""><option value="">경보</option></select>
+                  <select name="" id=""><option value="">발표</option></select>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" colspan="3">전파매체</th>
+                <td>
+                  <span class="check_wrap">
+                  <label for="CBS"><input type="checkbox" id="CBS">CBS</label>
+                  <label for="DMB"><input type="checkbox" id="DMB">DMB</label>
+                  <label for="DITS"><input type="checkbox" id="DITS">DITS</label>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" colspan="3">대상지역</th>
+                <td>강원도(전체), 경상북도(전체)</td>
+              </tr>
+              <tr>              
+                <th scope="row" rowspan="4" width="40px;">CBS</th>
+                <th scope="row" colspan="2">재난유형</th>
+                <td>
+                  <select name="" id=""><option value="">자연재난</option></select>
+                  <select name="" id=""><option value="">호우</option></select>
+                  <select name="" id=""><option value="">경보</option></select>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" colspan="2">발송채널</th>
+                <td><select name="" id=""><option value="">안전안내문자 (채널:0000)</option></select></td>
+              </tr>
+              <tr>
+                <th scope="row" rowspan="2" class="th_default" width="40px;">메시지</th>
+                <th scope="row" width="25px;">2G</th>
+                <td>
+                  <textarea name="" id="" cols="30" rows="2" class="full">[행정안전부] 오늘 00시 강원, 경북 지역 호우경보, 산사태·상습침수 등 위험지역 대피, 외출자제 등 안전에 주의바랍니다.</textarea>
+                  <span class="info_size"><b>55</b>&sol;<b>110</b>Byte</span>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">4G</th>
+                <td><textarea name="" id="" cols="30" rows="2" class="full">[행정안전부] 오늘 00시 강원, 경북 지역 호우경보, 산사태·상습침수 등 위험지역 대피, 외출자제 등 안전에 주의바랍니다.</textarea>
+                  <span class="info_size"><b>55</b>&sol;<b>110</b>Byte</span>
+                </td>
+              </tr>
+              <tr>              
+                <th scope="row" rowspan="2">DMBS</th>
+                <th scope="row" colspan="2">재난유형</th>
+                <td>
+                  <select name="" id=""><option value="">자연재난</option></select>
+                  <select name="" id=""><option value="">호우경보</option></select>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" colspan="2">메시지</th>
+                <td><textarea name="" id="" cols="30" rows="" class="full">오늘 00시 강원, 경북 지역 호우경보, 산사태·상습침수 등 위험지역 대피, 외출자제 등 안전에 주의바랍니다. [행정안전부]</textarea>
+                  <span class="info_size"><b>55</b>&sol;<b>110</b>Byte</span>
+                </td>
+              </tr>
+              <tr>              
+                <th scope="row" rowspan="3">DMBS</th>
+                <th scope="row" colspan="2">재난유형</th>
+                <td>
+                  <select name="" id=""><option value="">자연재난</option></select>
+                  <select name="" id=""><option value="">호우경보발표</option></select>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" colspan="2">발표지역</th>
+                <td><input type="text" class="full" value="강원(전체), 경북(전체)"></td>
+              </tr>
+              <tr>
+                <th scope="row" colspan="2">메시지</th>
+                <td>
+                  <textarea name="" id="" cols="30" rows="5" class="full" style="height:98px">1. 방송통신발전기본법 제40조(재난방송)와 관련하여
+  2. 오늘 00시 호우경보가 발효됨에 따라 위 법령에 의거 아래와 같이 재난방송을 요청하오니 국민들이 경각심을 갖고 미리 대비할 수 있도록 자막표출 등 재난방송을 실시하여 주시기 바랍니다.
+  [ 방송문안]
+  - 오늘 00시 강원, 경북 지역에 호우경보가 발효되었습니다.
+  - 집중호우시 인명피해가 많이 발생하고 있는 물에 잠긴 도로나 소규모 교량
+                  </textarea>
+                  <span class="info_size"><b>55</b>&sol;<b>110</b>Byte</span>
+                </td>
+              </tr>             
+            </table>
+          </div>
+        </div>
+        <div class="section fr">
+          <div class="gis_wrap">
+            <div class="tit">
+              <h2>발송대상지역</h2>
+              <span class="fr">
+                <button type="button" class="axib axi_squCheck">전체선택</button>
+                <button type="button" class="axib axi_squCheck_off">선택해제</button>
+                <button type="button" class="axib axi_squCheck">지역선택</button>
+              </span>
+            </div>
+            <div class="body">
+              <div class="section area_list">
+                <ul>
+                  <li><label for="a1"><input type="checkbox" id="a1" />세종특별자치시</label></li>
+                  <li><label for="a2"><input type="checkbox" id="a2" />구로구</label></li>
+                </ul>
+              </div>
+              <div class="section gis_area">
+                <img src="http://placehold.it/410x520" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="page_areaB">
+        <span class="fr">
+          <button type="button" class="btn btn_red">임시저장</button>
+          <button type="button" class="btn btn_red">승인요청</button>
+          <button type="button" class="btn btn_red">승인&sol;전송</button>
+          <button type="button" class="btn btn_red">반려</button>
+          <button type="button" class="btn btn_blue">목록</button>
+        </span>
+      </div>        
+    </div>
   </div>
+
   <!-- @@include('../inc/loading.html') 
   @@include('pop_sms_confirm.html')
   @@include('pop_areaSelect.html') -->

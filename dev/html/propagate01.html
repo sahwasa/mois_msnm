@@ -4,14 +4,14 @@
   @@include('../inc/header.html')
   <div class="cont">
     @@include('../inc/location.html')
-    <div id="content" class="content min_width mdi_wrap">
-      <iframe src="" class="mdi_wrap" scrolling="no"></iframe>
+    <div id="content" class="content min_width">
+      <iframe id="ContentUrl" name="ContentUrl" class="mdi_wrap" scrolling="no" src  ="http://localhost:3000/html/propagate01_cm.html" ></iframe>
     </div>
     @@include('../inc/footer.html') 
   </div>
-  @@include('../inc/loading.html') 
+  <!-- @@include('../inc/loading.html') 
   @@include('pop_sms_confirm.html')
-  @@include('pop_areaSelect.html')
+  @@include('pop_areaSelect.html') -->
 </div>
 </body>
 </html>
@@ -35,11 +35,12 @@
     switch (thisType) {
       case '1':
         url = 'http://localhost:3000/html/propagate01_cm.html';
-        h = 800;
         break;
       case '2':
         url = 'http://localhost:3000/html/propagate01_list.html';
-        h = 654;        
+        break; 
+      case '3':
+        url = 'http://localhost:3000/html/propagate01_dtl.html';
         break; 
       case 'close':
         if($('.mdi_list').find('li').length <= 1){          
@@ -52,7 +53,7 @@
         break;
     }
 
-    frame.prop('src', url).css('height', h).attr('title',thisTit);
+    frame.prop('src', url).attr('title',thisTit);
     $('.mdi_list').find('li').removeClass('on');
     $(this).parent('li').addClass('on');
 
@@ -60,5 +61,18 @@
       $('.mdi_list').find('li').addClass('on');
       frameCtrl($('.mdi_list').find('input'));
     }
+    setTimeout(function(){
+      setFrameHeight();      
+      frame.css('height', h); 
+    }, 500);
   }) 
+
+  function setFrameHeight(){
+    if (ContentUrl.document != null) {
+      h = ContentUrl.document.getElementById('mdiWrap').scrollHeight;
+      return h;
+    }
+}
+
+
 </script>
