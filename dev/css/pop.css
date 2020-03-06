@@ -78,9 +78,6 @@
 [role="selAreaEvt"] li:first-child.on{background-color:transparent;}
 [role="selAreaEvt"] :first-child input{visibility:visible;}
 
-.warning_present .pop_body > .fl{width:44%;}
-.warning_present .pop_body > .fr{width:54%;}
-
 .board{width:960px;margin-left:-480px;}
 .board .pop_body{padding-bottom:0;}
 .board_tit,
@@ -116,7 +113,8 @@
 .dl_faq dt::before{content:"Q";background-color:#a7b5bc;}
 .dl_faq dd::before{content:"A";background-color:#385d9e;}
 
-.warning_present{width:1280px;margin:0 auto;}
+.warning_present .pop_body > .fl{width:calc(100% - 684px);}
+.warning_present .pop_body > .fr{width:664px;}
 .warning_present .article{padding:3px 10px 10px 10px;}
 .warning_present .article_body{overflow:hidden;}
 .warning_present .pop_body > .fl{margin-top:-25px;}
