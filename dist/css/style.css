@@ -235,12 +235,6 @@ table .th_2deps,
 .ui-jqgrid .ui-jqgrid-pager td{padding:0;border:none;background:transparent;}
 .ui-jqgrid .ui-jqgrid-pager input{height:16px;border-radius:0;vertical-align:baseline;padding:3px 8px;}
 
-/* error */
-.error{width:800px;background:url(../img/bg_error.png) 50% 50px no-repeat;padding-top:400px;margin:0 auto;}
-.error h1{font-size:60px;letter-spacing:-.05em; color:#385d9e;}
-.error p{font-size:20px;text-align: center;line-height:30px;margin:20px 0 50px;}
-.error .btn{font-size:16px;line-height:30px;}
-.error_foot{border-top: 1px solid #ccc;margin-top:30px;color:#999;padding-top:20px;}
 /* login */
 .login{min-width:1280px;border-top:1px solid #385d9e;margin-top:-45px;padding-top:44px;}
 .login .content{width:877px;height:564px;border:1px solid #d9d9d9;margin:100px auto 133px;overflow:hidden;margin-bottom:30px\0;}
@@ -321,18 +315,6 @@ table .th_2deps,
 .content_body > .section > .article:first-of-type{margin-top:0;}
 
 .page_areaB{width:100%;margin-top:18px;overflow:hidden;}
-
-.gis_wrap .tit{background-color:#385d9e;padding-left:10px;}
-.gis_wrap .tit h2{color:#fff;line-height:35px;}
-.gis_wrap .tit .fr{width:421px;height:35px;background-color: #fff;border:1px solid #a7b5bc;border-left-width:0;padding:0 5px;text-align:right;line-height:32px;line-height:31px\0;}
-.gis_wrap .tit .axib{line-height:22px;padding:0 9px;}
-.gis_wrap .tit .axib::before{color:#f8635b;vertical-align:middle;}
-.gis_wrap .tit .axi_squCheck_off::before{color:#385d9e;}
-.gis_wrap .body{display:flex;justify-content:space-between;min-height:520px;border:1px solid #a7b5bc;border-top-width:0;overflow:hidden;}
-.gis_wrap .body .section{flex:0 1 auto;padding:5px;}
-.gis_wrap .body .area_list{width:calc(100% - 420px);border-right:1px solid #a7b5bc;padding-right:0;}
-.gis_wrap .body .area_list li{width:100%;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;}
-.gis_wrap .body .gis_area{width:420px;}
 
 .map_wrap .tit{background-color:#385d9e;padding-left:10px;}
 .map_wrap .tit h2{color:#fff;line-height:35px;}
