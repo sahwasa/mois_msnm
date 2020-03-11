@@ -1,0 +1,174 @@
+@@include('../inc/top.html')
+<body>
+<div class="wrap">
+  @@include('../inc/header.html')
+  <div class="cont">
+    @@include('../inc/location.html')
+    <div id="content" class="content min_width">
+      <div class="content_tit">
+        <h1>시스템 현황</h1>
+      </div>
+      <div class="content_body present_system">
+        <div class="fl section divide">
+          <div class="article fl">
+            <div class="article_tit">
+              <h2>네트워크 현황</h2>
+              <span class="fr">
+                <span class="period period_multi">
+                  <input type="text" class="from date" name="date1" role="from">
+                  <input type="text" class="to date" name="date1" role="to">
+                </span>
+                <button type="button" class="btn btn_blue">조회</button>
+              </span>
+            </div>
+            <div class="article_body tbl_wrap">
+              <table id="jqGrid" class="jq-grid"></table>
+              <div id="jqGridPager"></div>
+            </div>
+          </div>
+          <div class="article fr divide">
+            <div class="article_tit">
+              <h2>서버자원 현황</h2>
+              <span class="fr">
+                <span class="axi axi_dir_r">현재기준</span>
+              </span>
+            </div>
+            <div class="tbl_wrap article_body">
+              <table id="jqGrid2" class="jq-grid"></table>
+              <div id="jqGridPager2"></div>
+            </div>           
+          </div>
+
+        </div>
+        <div class="fr section">
+          <div class="article access_status">
+            <div class="article_tit">
+              <h2>연계 접속상태(송신)</h2>
+              <span class="fr">
+                <i class="t_mark_legend mark_green">정상</i>
+                <i class="t_mark_legend mark_red">연결실패</i>
+              </span>
+            </div>
+            <div class="article_body">
+              <div class="tbl_wrap">
+                <table class="tbl_layout">
+                  <tr>
+                    <th scope="col" width="197px">API 접속상태</th>
+                    <th><button type="button" class="axi_only axi_bell">알람</button></th>
+                  </tr>
+                  <tr>
+                    <td>안전디딤돌</td>
+                    <td><i class="t_mark mark_green">정상</i></td>
+                  </tr>
+                </table>
+              </div>
+              <div class="tbl_wrap">
+                <table class="tbl_layout">
+                  <tr>
+                    <th scope="col" width="197px">통신사 지역정보 갱신</th>
+                    <th><button type="button" class="axi_only axi_bellOff">알람거부</button></th>
+                  </tr>
+                  <tr>
+                    <td>KT 서버</td>
+                    <td><i class="t_mark mark_red">연결실패</i></td>
+                  </tr>
+                  <tr>
+                    <td>LGU+ 서버</td>
+                    <td><i class="t_mark mark_green">정상</i></td>
+                  </tr>
+                  <tr>
+                    <td>SKT 서버</td>
+                    <td><i class="t_mark mark_green">정상</i></td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>                
+      </div>
+    </div>
+    @@include('../inc/footer.html') 
+  </div>
+</div>
+</body>
+</html>
+@@include('../inc/script.html') 
+<script>
+  var data1 = [
+    {"status":"","th1":"WAS","th2":"내부망 WAS#1","th3":"WAS","th4":"내부망 WAS#1","th5":"2020-01-10 12:34:56","th6":"정상","th7":""},
+    {"status":"error","th1":"ESB","th2":"내부망 ESB#1","th3":"ESB","th4":"내부망 ESB#1","th5":"2020-01-10 12:34:56","th6":"오류","th7":"접속오류 상세내역"},
+    {"status":"","th1":"WAS","th2":"내부망 WAS#1","th3":"WAS","th4":"내부망 WAS#1","th5":"2020-01-10 12:34:56","th6":"정상","th7":""},
+    {"status":"","th1":"WAS","th2":"내부망 WAS#1","th3":"WAS","th4":"내부망 WAS#1","th5":"2020-01-10 12:34:56","th6":"정상","th7":""}
+  ];
+  $(function(){
+    var grid1 = $("#jqGrid");
+    grid1.jqGrid({
+      data:data1,
+      datatype: "local",
+      colModel: [
+        { label: '유형', name: 'th1', width:45},
+        { label: '상세', name: 'th2', width:130},
+        { label: '유형', name: 'th3', width:45},
+        { label: '상세', name: 'th4', width:130},
+        { label: '최종 감시 일시', name: 'th5',  width:190},
+        { label: '상태', name: 'th6', width:40},
+        {label:'상세', name: 'th7', align: 'left'},
+        {name : 'status', hidden:true}
+      ],
+      height:460,
+      rowTotal:-1,
+      rowNum:10,
+      pager: "#jqGridPager",
+      jsonReader : {repeatitems : false},
+      loadComplete : function(idx, rowId){
+        var rowIds = $(this).jqGrid('getDataIDs');
+        $.each(
+          rowIds, function(idx,rowId){
+            var rowData = grid1.getRowData(rowId),
+                state = "";
+            (rowData.status === 'error') ? state = "t_error" : state = "";
+            grid1.jqGrid('setRowData', rowId, false, state);
+          }
+        )
+      }     
+    })
+    .setGroupHeaders({
+      useColSpanStyle: true,
+      groupHeaders: [
+        { "numberOfColumns": 2, "titleText":"출발지서버", "startColumnName": "th1"},
+        { "numberOfColumns": 2, "titleText":"목적지서버", "startColumnName": "th3"}      ]
+    });
+
+    var data2 = [
+      {"th1":"WAS","th2":"내부망 WAS#1","th3":"0.00%","th4":"0.00%","th5":"0.00%","th6":"2020-01-10 12:34:56"}
+    ];
+    var grid2 = $("#jqGrid2");
+    grid2.jqGrid({
+      data:data2,
+      datatype: "local",
+      colModel: [
+        { label: '유형', name: 'th1', width:45},
+        { label: '상세', name: 'th2'},
+        { label: 'CPU', name: 'th3', width:60},
+        { label: '메모리', name: 'th4', width:60},
+        { label: '디스크', name: 'th5', width:60},
+        { label: '최종 감시 일시', name: 'th6',  width:170},
+      ],
+      height:460,
+      rowTotal:-1,
+      rowNum:10,
+      pager: "#jqGridPager2",
+      jsonReader : {repeatitems : false}
+    })
+    .setGroupHeaders({
+      useColSpanStyle: true,
+      groupHeaders: [
+        { "numberOfColumns": 2, "titleText":"서버", "startColumnName": "th1"},
+        { "numberOfColumns": 3, "titleText":"자원", "startColumnName": "th3"}      ]
+    });
+     // 페이지 사이즈에 맞게 그리드 넓이를 불러오는 함수입니다.
+    // ui_common.js에 위치합니다.
+    jqgridInit();
+  });
+</script>
+
