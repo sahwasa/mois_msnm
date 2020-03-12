@@ -128,6 +128,10 @@ input[type='radio']:checked{background:url(../img/bg_radioChecked.png) 0 0 no-re
 .list_num_only li::before{counter-increment:list_num;content:counter(list_num)'.';color:#333;margin-right:5px;}
 .dot_list li{text-align:left;}
 .dot_list li::before{content:"·";margin-right:5px;}
+.dash_list li::before{content:"-";margin-right:5px;}
+
+.etc{display:block;}
+.etc::before{content:"＊";}
 
 /* selected */
 .selected{overflow:hidden;margin-bottom:10px;}
@@ -235,11 +239,11 @@ table .th_2deps,
 .ui-jqgrid .ui-jqgrid-pager td{padding:0;border:none;background:transparent;}
 .ui-jqgrid .ui-jqgrid-pager input{height:16px;border-radius:0;vertical-align:baseline;padding:3px 8px;}
 
-/* error */	
-.error{width:800px;background:url(../img/bg_error.png) 50% 50px no-repeat;padding-top:400px;margin:0 auto;}	
-.error h1{font-size:60px;letter-spacing:-.05em; color:#385d9e;}	
-.error p{font-size:20px;text-align: center;line-height:30px;margin:20px 0 50px;}	
-.error .btn{font-size:16px;line-height:30px;}	
+/* error */
+.error{width:800px;background:url(../img/bg_error.png) 50% 50px no-repeat;padding-top:400px;margin:0 auto;}
+.error h1{font-size:60px;letter-spacing:-.05em; color:#385d9e;}
+.error p{font-size:20px;text-align: center;line-height:30px;margin:20px 0 50px;}
+.error .btn{font-size:16px;line-height:30px;}
 .error_foot{border-top: 1px solid #ccc;margin-top:30px;color:#999;padding-top:20px;}
 
 /* login */
@@ -323,6 +327,18 @@ table .th_2deps,
 
 .page_areaB{width:100%;margin-top:18px;overflow:hidden;}
 
+.gis_wrap .tit{background-color:#385d9e;padding-left:10px;}
+.gis_wrap .tit h2{color:#fff;line-height:35px;}
+.gis_wrap .tit .fr{width:421px;height:35px;background-color: #fff;border:1px solid #a7b5bc;border-left-width:0;padding:0 5px;text-align:right;line-height:32px;line-height:31px\0;}
+.gis_wrap .tit .axib{line-height:22px;padding:0 9px;}
+.gis_wrap .tit .axib::before{color:#f8635b;vertical-align:middle;}
+.gis_wrap .tit .axi_squCheck_off::before{color:#385d9e;}
+.gis_wrap .body{display:flex;justify-content:space-between;min-height:520px;border:1px solid #a7b5bc;border-top-width:0;overflow:hidden;}
+.gis_wrap .body .section{flex:0 1 auto;padding:5px;}
+.gis_wrap .body .area_list{width:calc(100% - 420px);border-right:1px solid #a7b5bc;padding-right:0;}
+.gis_wrap .body .area_list li{width:100%;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;}
+.gis_wrap .body .gis_area{width:420px;}
+
 .map_wrap .tit{background-color:#385d9e;padding-left:10px;}
 .map_wrap .tit h2{color:#fff;line-height:35px;}
 .map_wrap .tit .fr{width:421px;height:35px;background-color: #fff;border:1px solid #a7b5bc;border-left-width:0;padding:0 5px;text-align:right;line-height:32px;line-height:31px\0;}
@@ -372,3 +388,33 @@ table .th_2deps,
 .t_mark_legend::before{margin:-3px 2px 0 5px;}
 .mark_green::before{background-color:#658a0c;}
 .mark_red::before{background-color:#d02a3d;content:"！";}
+
+.sys_intro{max-width:975px;}
+.sys_intro .content_tit p{border:2px solid #385d9e;border-width:2px 0;padding:15px 10px;color:#385d9e;line-height:20px;font-weight:600;letter-spacing:-.05em;}
+.sys_intro h2{color:#385d9e;}
+.sys_intro h2::before{content:"";display:inline-block;width:10px;height:10px;border:2px solid #385d9e;border-radius:50%;box-sizing:border-box;}
+.sys_intro .article{margin-bottom:25px;}
+.sys_intro .article_body{padding-left:15px;}
+.sys_intro .dash_list .etc{padding-left:10px;}
+.sys_intro01{padding-bottom:300px;background:url(../img/bg_sys_intro01.jpg) 0 100% no-repeat;margin-bottom:-30px;}
+.sys_intro p,
+.sys_intro li{line-height:20px;color:#555;}
+.sys_intro .dash_list li{margin-top:10px;}
+.sys_intro .li_mg0 li{margin:0;}
+.sys_intro02 .box_grayline{max-width:896px;padding:20px 0;text-align:center;margin:15px 0;}
+.li_tvsub_system{counter-reset:tvsub_system;overflow: hidden;}
+.li_tvsub_system dt,
+.li_tvsub_system dd{height:30px;box-sizing:border-box;line-height:29px;margin-top:6px;}
+.li_tvsub_system dt{position:relative;float:left;width:154px;border:1px solid #000;border-left-width:0;margin-right:10px;}
+.li_tvsub_system dt::before{counter-increment:tvsub_system;display:block;float:left;width:30px;content:"0"counter(tvsub_system);color:#fff;text-align:center;margin-right:8px;}
+.li_tvsub_system dt:nth-of-type(1){border-color:#f8635b;color:#f8635b;}
+.li_tvsub_system dt:nth-of-type(1)::before{background-color:#f8635b;}
+.li_tvsub_system dt:nth-of-type(2),
+.li_tvsub_system dt:nth-of-type(3){border-color:#f89a5b;color:#f89a5b;}
+.li_tvsub_system dt:nth-of-type(2)::before,
+.li_tvsub_system dt:nth-of-type(3)::before{background-color:#f89a5b;}
+.li_tvsub_system dt:nth-of-type(4),
+.li_tvsub_system dt:nth-of-type(5){border-color:#73ab05;color:#73ab05;}
+.li_tvsub_system dt:nth-of-type(4)::before,
+.li_tvsub_system dt:nth-of-type(5)::before{background-color:#73ab05;}
+.li_tvsub_system dt::after{content:"";position:absolute;left:-4px;top:1px;border-top:1px solid #fff;width:13px;height:0;transform:rotate(50deg);}
