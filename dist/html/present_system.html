@@ -162,13 +162,33 @@
           <div class="article fl">
             <div class="article_tit">
               <h2>네트워크 현황</h2>
-              <span class="fr">
+
+
+
+              <div id="jquery_jplayer_1" class="jp-jplayer"></div>
+              <div id="jp_container_1" class="jq_container fr">
+                <!-- <label for="">경고음</label> -->
+                <div class="jp-gui ui-widget ui-widget-content">
+                  <ul>
+                    <li class="jp-mute ui-state-default"><a href="javascript:;" class="jp-mute ui-icon ui-icon-volume-off" tabindex="1" title="음소거">음소거</a></li>
+                    <li class="jp-unmute ui-state-default ui-state-active"><a href="javascript:;" class="jp-unmute ui-icon ui-icon-volume-off" tabindex="1" title="음소거 해제">음소거 해제</a></li>
+                    <li class="jp-volume-max ui-state-default"><a href="javascript:;" class="jp-volume-max ui-icon ui-icon-volume-on" tabindex="1" title="최대음량">최대음량</a></li>
+                  </ul>
+                  <div class="jp-volume-slider"></div>
+                </div>
+                <div class="jp-no-solution">
+                  <span>필수 업데이트 안내</span>
+                  음성을 재생하려면 최신 브라우저로 업데이트하거나 플래시 플러그인을 업데이트 해주세요. <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
+                </div>
+              </div>  
+
+              <!-- <span class="fr">
                 <span class="period period_multi">
                   <input type="text" class="from date" name="date1" role="from">
                   <input type="text" class="to date" name="date1" role="to">
                 </span>
                 <button type="button" class="btn btn_blue">조회</button>
-              </span>
+              </span> -->
             </div>
             <div class="article_body tbl_wrap">
               <table id="jqGrid" class="jq-grid"></table>
@@ -258,6 +278,7 @@
 <script src="../plugins/jquery-ui/ui/i18n/datepicker-ko.js" type="text/javascript"></script>
 <script src="../plugins/jqGrid/js/jquery.jqGrid.min.js" type="text/javascript"></script>
 <script src="../plugins/jqGrid/js/i18n/grid.locale-kr.js" type="text/javascript"></script>
+<script src="../plugins/jquery.jplayer.min.js" type="text/javascript"></script>
 <script src="../js/ui_common.js"></script> 
 <script>
   var data1 = [

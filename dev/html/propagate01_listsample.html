@@ -53,85 +53,7 @@
         <div class="tbl_wrap">
           <table id="jqGrid" class="jq-grid"></table>
           <div id="jqGridPager"></div>
-          <!-- <table class="tbl_default">
-            <caption>대국민상황전파실제 내용</caption>
-            <thead>
-              <tr>
-                <th scope="col" rowspan="3" width="50">번호</th>
-                <th scope="col" rowspan="3">제목</th>
-                <th scope="col" colspan="2" class="th_1deps">승인요청</th>
-                <th scope="col" colspan="4" class="th_1deps">승인&sol;전송</th>
-                <th scope="col" colspan="3" class="th_1deps">전파매체</th>
-              </tr>
-              <tr class="th_2deps">
-                <th scope="col" width="120">요청일시</th>
-                <th scope="col" width="120">요청자</th>
-                <th scope="col" width="120">승일일시</th>
-                <th scope="col" width="120">승인자</th>
-                <th scope="col" width="120">전송상태</th>
-                <th scope="col" width="120">완료일시</th>
-                <th scope="col" width="50">CBS</th>
-                <th scope="col" width="50">DMB</th>
-                <th scope="col" width="50">DITS</th>
-              </tr>
-              <tr>
-                <th>3deps</th>
-                <th>3deps</th>
-                <th>3deps</th>
-                <th>3deps</th>
-                <th>3deps</th>
-                <th>3deps</th>
-                <th>3deps</th>
-                <th>3deps</th>
-                <th>3deps</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td class="alignL">산사태 주의단계</td>
-                <td>2020-01-10 12:34:56</td>
-                <td>행정안전부 &sol; 홍길동</td>
-                <td>2020-02-10 12:34:56</td>
-                <td>행정안전부 &sol; 홍길동</td>
-                <td><span class="t_green">승인요청중</span></td>
-                <td>2020-02-10 12:34:56</td>
-                <td>CBS</td>
-                <td>DMB</td>
-                <td>DITS</td>
-              </tr>
-              <tr>
-                <td>1</td>
-                <td class="alignL">산사태 주의단계</td>
-                <td>2020-01-10 12:34:56</td>
-                <td>행정안전부 &sol; 홍길동</td>
-                <td>2020-02-10 12:34:56</td>
-                <td>행정안전부 &sol; 홍길동</td>
-                <td><span class="t_mint">전송완료</span></td>
-                <td>2020-02-10 12:34:56</td>
-                <td>CBS</td>
-                <td>DMB</td>
-                <td>DITS</td>
-              </tr>
-              <tr>
-                <td>1</td>
-                <td class="alignL">산사태 주의단계</td>
-                <td>2020-01-10 12:34:56</td>
-                <td>행정안전부 &sol; 홍길동</td>
-                <td>2020-02-10 12:34:56</td>
-                <td>행정안전부 &sol; 홍길동</td>
-                <td><span class="t_wine">반려</span></td>
-                <td>2020-02-10 12:34:56</td>
-                <td>CBS</td>
-                <td>DMB</td>
-                <td>DITS</td>
-              </tr>
-            </tbody>
-          </table> -->
         </div>
-        <!-- <div class="tbl_areaB">
-          @@include('../inc/paginate.html')
-        </div>         -->
       </div>
     </div>
     @@include('../inc/footer.html') 
@@ -143,25 +65,26 @@
 
 <script>
   var data1 = [
-    {"th1":"산사태 주의단계","th2":"2020-01-10 12:34:56","th3":"행정안전부 / 홍길동","th4":"2020-01-10 12:34:56","th5":"행정안전부 / 홍길동","th6":"전송완료","th7":"2020-01-10 12:34:56","th8":"CBS","th9":"DMB","th10":"DITS"},    
-    {"th1":"산사태 주의단계","th2":"2020-01-10 12:34:56","th3":"행정안전부 / 홍길동","th4":"2020-01-10 12:34:56","th5":"행정안전부 / 홍길동","th6":"승인요청중","th7":"2020-01-10 12:34:56","th8":"CBS","th9":"DMB","th10":"DITS"},    
-    {"th1":"산사태 주의단계","th2":"2020-01-10 12:34:56","th3":"행정안전부 / 홍길동","th4":"2020-01-10 12:34:56","th5":"행정안전부 / 홍길동","th6":"반려","th7":"2020-01-10 12:34:56","th8":"CBS","th9":"DMB","th10":"DITS"}
+    {"status":"new","th1":"왼쪽정렬/12px/#333","th2":"가운데정렬/12px/#333","th3":"행정안전부 / 홍길동","th4":"가운데정렬/12px/#333","th5":"행정안전부 / 홍길동","th6":"전송완료","th7":"가운데정렬/12px/#333","th8":"CBS","th9":"DMB","th10":"DITS"},    
+    {"status":"delay","th1":"왼쪽정렬/12px/#333","th2":"가운데정렬/12px/#333","th3":"행정안전부 / 홍길동","th4":"가운데정렬/12px/#333","th5":"행정안전부 / 홍길동","th6":"승인요청중","th7":"가운데정렬/12px/#333","th8":"CBS","th9":"DMB","th10":"DITS"},    
+    {"status":"today","th1":"왼쪽정렬/12px/#333","th2":"가운데정렬/12px/#333","th3":"행정안전부 / 홍길동","th4":"가운데정렬/12px/#333","th5":"행정안전부 / 홍길동","th6":"반려","th7":"가운데정렬/12px/#333","th8":"CBS","th9":"DMB","th10":"DITS"},
+    {"th1":"마우스오버 스타일","th2":"가운데정렬/12px/#333","th3":"행정안전부 / 홍길동","th4":"가운데정렬/12px/#333","th5":"행정안전부 / 홍길동","th6":"반려","th7":"가운데정렬/12px/#333","th8":"CBS","th9":"DMB","th10":"DITS"},
+    {"th1":"선택된 줄","th2":"가운데정렬/12px/#333","th3":"행정안전부 / 홍길동","th4":"가운데정렬/12px/#333","th5":"행정안전부 / 홍길동","th6":"반려","th7":"가운데정렬/12px/#333","th8":"CBS","th9":"DMB","th10":"DITS"}
   ];
   $(function(){
-    $("#jqGrid").jqGrid({
+    var grid1 = $("#jqGrid")
+    grid1.jqGrid({
       data:data1,
       datatype: "local",
       colModel: [
-        { label: '제목', name: 'th1'},
-        { label: '요청일시', name: 'th2',  width:100},
-        { label: '요청자', name: 'th3',  width:100},
-        { label: '승인일시', name: 'th4',  width:100},
-        { label: '승인자', name: 'th5',  width:100},
-        { label: '전송상태', name: 'th6',  width:50, formatter:mk_status},
-        { label: '완료일시', name: 'th7',  width:100},
-        { label: 'CBS', name: 'th8',  width:40},
-        { label: 'DMB', name: 'th9',  width:40},
-        { label: 'DITS', name: 'th10',  width:40},
+        {name : 'status', hidden:true},
+        { label: '제목01 (12px/font-weight:600/#333)', name: 'th1', align:'left', cellattr: function () { return " class='t_tag_area'" }},
+        { label: '제목02_01', name: 'th2',  width:100},
+        { label: '제목02_02', name: 'th3',  width:100},
+        { label: '제목03_01', name: 'th4',  width:100},
+        { label: '제목03_02', name: 'th5',  width:100},
+        { label: '제목03_03', name: 'th6',  width:50, formatter:mk_status},
+        { label: '제목03_04', name: 'th7',  width:100}
       ],
       height:260,
       rowTotal:-1,
@@ -169,14 +92,37 @@
       rownumbers: true,
       rownumWidth: 25,
       pager: "#jqGridPager",
-      jsonReader : {repeatitems : false}                     
+      jsonReader : {repeatitems : false},                     
+      loadComplete : function(idx, rowId){
+        var rowIds = $(this).jqGrid('getDataIDs');
+        $.each(
+          rowIds, function(idx,rowId){
+            var rowData = grid1.getRowData(rowId),
+                state = "";
+            switch (rowData.status) {
+              case "new":
+                state = "t_tag t_new"
+                break;
+              case "delay":
+                state = "t_tag t_delay"          
+                break;      
+              case "today":
+                state = "t_tag t_today"
+                break;
+              default:
+                state = "t_tag"
+                break;
+            }
+            grid1.jqGrid('setRowData', rowId, false, state);
+          }
+        )
+      }     
     })
     .setGroupHeaders({
       useColSpanStyle: true,
       groupHeaders: [
-        { "numberOfColumns": 2, "titleText":"승인요청", "startColumnName": "th2" },
-        { "numberOfColumns": 4, "titleText":"승인/전송", "startColumnName": "th4" },
-        { "numberOfColumns": 3, "titleText":"전송매체", "startColumnName": "th8" }]
+        { "numberOfColumns": 2, "titleText":"제목02", "startColumnName": "th2" },
+        { "numberOfColumns": 4, "titleText":"제목03", "startColumnName": "th4" }]
     });
     function mk_status(cellValue, options, rowdata, action){
       var html, status;
