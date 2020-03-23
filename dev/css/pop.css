@@ -44,7 +44,7 @@
 .filter label::before,
 .filter .label::before{content:"·";color:#f8635b;margin-right:3px;}
 .sms_confirm,
-.request_alert{top:50%;width:446px;margin:-200px 0 0 -223px;}
+.request_alert{top:50%;width:800px;margin:-265px 0 0 -395px;}
 .request_alert .list_num_only{border:1px solid #a7b5bc;border-width:1px 0; overflow:hidden;}
 .request_alert .list_num_only li{position:relative;line-height:40px;border-top:1px solid #e3e6ea;padding-right:80px;}
 .request_alert .list_num_only li:first-child{border-top:none;}
@@ -140,7 +140,7 @@
 .tbl_count tfoot td{background-color:#d6e0f3;color:#385d9e;border-color:#bfcadf;}
 
 .warning_present .map_wrap{position:relative;width:calc(100% - 140px);height:100%;}
-.li_mapData li{position:absolute;font-size:11px;letter-spacing:-.05em; text-shadow:0 0 3px #fff;font-weight:bold;}
+.li_mapData li{position:absolute;font-size:13px;letter-spacing:-.05em; text-shadow:0 0 3px #fff;font-weight:bold;}
 .li_mapData li span::before{content:"(";}
 .li_mapData li span::after{content:")";}
 .area01{left:305px;top:240px;}
