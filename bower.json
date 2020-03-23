@@ -14,11 +14,8 @@
     "dist/plugins",
     "tests"
   ],
-  "devDependencies": {
-    "jquery": "^1.11.0",
-    "jquery-ui": "^1.12.1"
-  },
   "dependencies": {
+    "jquery": "^1.11.0",
     "jqGrid": "jqgrid#^5.4.0",
     "jquery-ui": "^1.12.1"
   }

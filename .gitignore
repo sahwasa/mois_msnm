@@ -1,3 +1,4 @@
 /node_modules/
-# /dist/plugins/
+/dist/plugins/
 /dist/inc/
+/dev/
