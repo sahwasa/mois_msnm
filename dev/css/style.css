@@ -224,6 +224,14 @@ table .th_2deps,
 .t_error{background:#fff0f1;}
 .t_error td{color:#d02a3d;}
 
+.ui-jqgrid .blink{animation:blink 1.5s ease infinite;background:transparent;}
+.blink td{color:#fff;}
+@keyframes blink {
+  0% {background:#cd320e;}
+  50% {background:#e9c548;}
+  100% {background:#cd320e;}
+}
+
 /* jqgrid_custom */
 .ui-jqgrid.ui-corner-all{border-radius:0;border-color:#a7b5bc;border-width: 1px 0;}
 .ui-jqgrid .ui-jqgrid-hdiv{border-bottom-color:#a7b5bc;border-radius:0;background:transparent;}

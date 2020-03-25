@@ -115,7 +115,7 @@
     @@include('../inc/footer.html') 
   </div>
 
-  @@include('pop_requests_alert.html')
+  <!-- @@include('pop_requests_alert.html') -->
 </div>
 </body>
 </html>
@@ -125,6 +125,7 @@
     {"status":"new","th1":"산사태 주의단계","th2":"2020-01-10 12:34:56","th3":"행정안전부","th4":"기상특보","th5":"미승인","th6":"완료","th7":"CBS","th8":"DMB","th9":"DITS"},
     {"status":"delay","th1":"산사태 주의단계","th2":"2020-01-10 12:34:56","th3":"행정안전부","th4":"기상특보","th5":"미승인","th6":"완료","th7":"CBS","th8":"","th9":"DITS"},
     {"status":"today","th1":"산사태 주의단계","th2":"2020-01-10 12:34:56","th3":"행정안전부","th4":"기상특보","th5":"미승인","th6":"완료","th7":"CBS","th8":"DMB","th9":""},
+    {"status":"blink","th1":"산사태 주의단계","th2":"2020-01-10 12:34:56","th3":"행정안전부","th4":"기상특보","th5":"미승인","th6":"완료","th7":"CBS","th8":"DMB","th9":""},
     {"status":"","th1":"산사태 주의단계","th2":"2020-01-10 12:34:56","th3":"행정안전부","th4":"기상특보","th5":"미승인","th6":"완료","th7":"CBS","th8":"DMB","th9":""},
   ];
   $(function(){
@@ -166,6 +167,9 @@
                 break;      
               case "today":
                 state = "t_tag t_today"
+                break;
+              case "blink":
+                state = "t_tag blink"
                 break;
               default:
                 state = "t_tag"
