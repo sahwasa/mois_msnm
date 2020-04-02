@@ -21,6 +21,7 @@
       }, delay);
     },
     'click' :  function(){
+      $header.removeClass('lnb_hover');
       $header.removeClass(full_lnb);
     }
   });
