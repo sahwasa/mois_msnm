@@ -164,13 +164,14 @@
 .area16{left:300px;top:553px;}
 .area17{left:230px;top:795px;}
 
-.mmsSendStd{width:700px;margin-left:-300px;top:50px;}
-.mmsSendStd .pop_body{margin-top:-15px;}
+.mmsSendStd{width:800px;margin-left:-400px;top:50px;}
 .mmsSendStd .tbl_wrap{margin-top:15px;}
+.mmsSendStd .tbl_wrap:first-of-type{margin-top:0;}
 .mmsSendStd thead th{border-bottom: 1px solid #9dacb5;}
 .mmsSendStd th,
 .mmsSendStd td{text-align:center;line-height:14px!important;}
 .mmsSendStd th p{text-align:center;}
+.mmsSendStd .ie_mgfix{margin-bottom:25px\0;}
 
 /* treemenu */
 .accordion_wrap{text-align:left;overflow-y:auto;}

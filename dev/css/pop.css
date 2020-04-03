@@ -143,34 +143,35 @@
 .tbl_count tfoot td{background-color:#d6e0f3;color:#385d9e;border-color:#bfcadf;}
 
 .warning_present .map_wrap{position:relative;width:calc(100% - 140px);height:100%;}
-.li_mapData li{position:absolute;font-size:13px;letter-spacing:-.05em; text-shadow:0 0 3px #fff;font-weight:bold;}
+.li_mapData li{position:absolute;font-size:25px;letter-spacing:-.05em; text-shadow:0 0 3px #fff;font-weight:bold;}
 .li_mapData li span::before{content:"(";}
 .li_mapData li span::after{content:")";}
-.area01{left:305px;top:240px;}
-.area02{left:420px;top:220px;}
-.area03{left:200px;top:245px;}
-.area04{left:310px;top:280px;}
-.area05{left:370px;top:320px;}
-.area06{left:270px;top:400px;}
-.area07{left:320px;top:370px;}
-.area08{left:345px;top:395px;}
-.area09{left:460px;top:380px;}
-.area10{left:420px;top:530px;}
-.area11{left:480px;top:465px;}
-.area12{left:545px;top:518px;}
-.area13{left:530px;top:570px;}
-.area14{left:300px;top:480px;}
-.area15{left:265px;top:585px;}
-.area16{left:300px;top:553px;}
-.area17{left:230px;top:795px;}
+.area01{left:305px;top:226px;}
+.area02{left:420px;top:180px;}
+.area03{left:208px;top:268px;}
+.area04{left:165px;top:178px;}
+.area05{left:370px;top:311px;}
+.area06{left:145px;top:369px;}
+.area07{left:320px;top:359px;}
+.area08{left:345px;top:393px;}
+.area09{left:512px;top:414px;}
+.area10{left:382px;top:520px;}
+.area11{left:480px;top:452px;}
+.area12{left:550px;top:506px;}
+.area13{left:530px;top:560px;}
+.area14{left:210px;top:480px;}
+.area15{left:195px;top:585px;}
+.area16{left:296px;top:545px;}
+.area17{left:251px;top:785px;}
 
-.mmsSendStd{width:700px;margin-left:-300px;top:50px;}
-.mmsSendStd .pop_body{margin-top:-15px;}
+.mmsSendStd{width:800px;margin-left:-400px;top:50px;}
 .mmsSendStd .tbl_wrap{margin-top:15px;}
+.mmsSendStd .tbl_wrap:first-of-type{margin-top:0;}
 .mmsSendStd thead th{border-bottom: 1px solid #9dacb5;}
 .mmsSendStd th,
 .mmsSendStd td{text-align:center;line-height:14px!important;}
 .mmsSendStd th p{text-align:center;}
+.mmsSendStd .ie_mgfix{margin-bottom:25px\0;}
 
 /* treemenu */
 .accordion_wrap{text-align:left;overflow-y:auto;}

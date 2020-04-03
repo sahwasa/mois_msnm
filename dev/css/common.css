@@ -340,3 +340,4 @@ li.jp-unmute,
 .jp-volume-slider .ui-slider-handle.ui-state-hover{border-color:#8a9aa5;}
 .jp-gui .ui-state-active:hover{background-color:#f35857;border-color:#f35857; }
 .jp-gui .ui-state-active:hover::before{color:#fff;}
+iframe[name="ssoSessionData"]{position:absolute;}

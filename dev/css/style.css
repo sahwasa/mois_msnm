@@ -295,6 +295,10 @@ table .th_2deps,
 .main_card .propagate h2{font-size:15px;color:#fff;}
 .propagate h2 em{display:block;font-size:57px;line-height:68px;}
 .main_card .propagate p{font-size:12px;color:#fff;text-align:center;margin-top:10px;}
+.propagate::before{content:"";display:block;position: absolute;left:50%;bottom:32px;margin-left:-54px; width:108px;height:108px;border-radius:50%;background-color:rgba(255,255,255,.2);cursor:pointer;}
+.propagate::after{position:absolute;left:50%;bottom:60px;font-size:52px;color:#fff;font-family:'axicon';margin-left:-22px;cursor:pointer;}
+.main_card li.propagate:first-child::after{content:"\f04b";margin-left:-16px;}
+.main_card li:nth-child(3)::after{content:"\f04c";}
 .main_card > .help_desk{flex-basis:210px;align-self:flex-end;background-color:#9d7753;color:#dac9ba;}
 .help_desk .section{text-align:left;padding:39px 0 10px 15px;background:url(../img/bg_quick_ico.png) 143px -243px no-repeat;}
 .main_card .help_desk h2{display:block;width:100%;background-color:#b19275;font-size:17px;line-height:51px;color:#fff;text-align:left;padding:0 16px;}
