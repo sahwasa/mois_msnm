@@ -1,0 +1,39 @@
+@charset "utf-8";
+
+
+.gnb_wrap{display:none !important;} 
+/* 여기서부터 style.css 하단에 붙여넣어주세요 */
+/* desktops only menu */
+@media all and (min-width:1181px){
+    .lnb{display:none !important;}
+	.gnb_wrap{display:block !important;}    
+    .header{position:fixed;top:0;width:100%;height:auto !important;background-color:#fff;z-index:9999;border-bottom:1px solid #385d9e;}
+    .cont{position:fixed;left:220px;top:65px;width:calc(100% - 220px);height:calc(100vh - 65px);margin-top: 0 !important;overflow-x:hidden;overflow-y:auto;}
+	.main{width:calc(100vw - 220px);}
+    .content{width:calc(100vw - 220px);min-height:calc(100vh - 183px) !important;}
+    .gnb_wrap{position:fixed;width:220px;height:100%;background-color:#243c68;z-index:9999;}
+    nav h1{background-color:#000d2a;line-height:127px;text-align:center;}
+    .depth1{position:relative;display:block;border-bottom:1px solid #3b4960;font-size:14px;color:#fff !important;line-height:55px;padding-left: 42px;background:#243c68 url(../img/ico_depth2.png)94% 0 no-repeat;}
+    .depth1::before{position:absolute;left: 10px;display:inline-block;width:28px;height:56px;content:'';background:url(../img/ico_menu.png);}
+    #gnb li.idsp .depth1::before{background-position:0 0%;}
+    #gnb li.intro .depth1::before{background-position:0 20%;}
+    #gnb li.boardM .depth1::before{background-position:0 40%;}
+    #gnb li.current .depth1::before{background-position:0 60%;}
+    #gnb li.setting .depth1::before{background-position:0 80%;}
+    .depth1.empty{background:none;}
+    .depth1.on{background-position-y:100%;background:#647595 url("../img/ico_depth2.png") 94% bottom no-repeat;}
+    .depth2{border-bottom:1px solid #2e4057;background-color:#162647;line-height:44px;}
+    .depth2 a{display:block;width:100%;padding:0 0 0 40px;font-size:13px;letter-spacing:-1.2px;color:#fff;border-bottom:1px solid #2d436a;background:url();box-sizing:border-box;}
+    .depth3 >a{position:relative;}
+    .depth3 >a::before,
+    .depth3 >a::after{position:absolute;left:25px;font-family:'axicon';}
+    .depth3 >a::before{content:'\f067';font-size:10px;}
+    .depth3 >a.on::before{content:'\f068';font-size:10px;}
+    .depth2>li>a.on,.depth2>li>a:hover{color:#ffc25f;}
+    .depth3 > ul{padding:6px 0;background-color:#0d192f;}
+    .depth3 > ul a{position:relative;width:100%;padding:0  0 0 55px;font-size:13px;letter-spacing:-1.2px;color:#fff;border-bottom:none;}
+    .depth3 > ul a::before{position:absolute;top:50%;left:40px;display:inline-block;content:'';width:4px;height:4px;border-radius:5px;background-color:#ddd;transform:translateY(-50%);opacity:.15;}
+    .depth3 > ul a.on,.depth3 > ul a:hover{color:#a6d9f7;}
+    .depth3 > ul a.on::before,.depth3 > ul a:hover::before{background-color:#a6d9f7;opacity:1;}
+    .depth3 li{line-height:40px;}
+}

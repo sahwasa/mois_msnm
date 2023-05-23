@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="../css/common.css" />
     <link rel="stylesheet" href="../css/style.css" />    
     <link rel="stylesheet" href="../css/pop.css" />
+    <link rel="stylesheet" href="../css/add.css" />
   </head>
 <body>
 <div class="wrap">
@@ -22,21 +23,257 @@
 <hr />
 <!-- 바로가기 메뉴__e -->
 <div class="header min_width">
-  <h1 class="logo"><a href="">대국민 상황전파</a></h1>
-  <div class="fr gnb">
-    <ul class="gnb_list">
-      <li><b>홍길동</b>님 반갑습니다.</li>
-      <li class="divide"><button type="button" class="btn btn_blueline">로그아웃</button></li>
-      <!-- <li><button type="button" class="btn btn_gray">내정보</button></li>     -->
-      <li class="divide">
-        <ul class="gnb_link">
-          <li><button type="button">공지사항</button></li></li>
-          <li><button type="button">FAQ</button></li>
-          <li><button type="button" class="axia axi_newWin">NDMS</button></li>
-          <li><a href="../img/User_Guide_1.0.pdf" target="_blank" class="axia axi_down">지침서</a></li>
-        </ul>
-    </ul>
+  <div class="flex_wrap f_sb">
+    <h1 class="logo"><a href="">대국민 상황전파</a></h1>
+    <div class="fr gnb">
+      <ul class="gnb_list">
+        <li><b>홍길동</b>님 반갑습니다.</li>
+        <li class="divide"><button type="button" class="btn btn_blueline">로그아웃</button></li>
+        <!-- <li><button type="button" class="btn btn_gray">내정보</button></li>     -->
+        <li class="divide">
+          <ul class="gnb_link">
+            <li><button type="button">공지사항</button></li></li>
+            <li><button type="button">FAQ</button></li>
+            <li><button type="button" class="axia axi_newWin">NDMS</button></li>
+            <li><a href="../img/User_Guide_1.0.pdf" target="_blank" class="axia axi_down">지침서</a></li>
+          </ul>
+      </ul>
+    </div>
   </div>
+
+  <div class="gnb_wrap">
+    <ul id="gnb">
+      <li class="idsp">
+        <a href="#" class="depth1">
+          통합재난문자시스템
+        </a>
+        <ul class="depth2" style="display: none;">
+          <li style="cursor: pointer;" class="">
+            <a onclick="fn_Page('/IDSP/idsp/idspListPage.do?testAt=N', ' 통합재난문자시스템(실제)', '109001001');">
+              통합재난문자시스템(실제)
+            </a>
+          </li>
+          <li style="cursor: pointer;" class="">
+            <a onclick="fn_Page('/IDSP/idsp/idspListPage.do?testAt=Y', ' 통합재난문자시스템(훈련)', '109001002');">
+              통합재난문자시스템(훈련)
+            </a>
+          </li>
+          <li class="depth3">
+            <a href="#">통합재난문자시스템 현황</a>
+          <ul style="display: none;">
+          <li style="cursor: pointer;">
+            <a onclick="javascript:fn_Page('/IDSP/idsp/idspStatListByOrgPage.do', '기관별 상황전파 현황', '109001003001'); ">
+              기관별 상황전파 현황
+            </a>
+          </li>
+          <li style="cursor: pointer;">
+            <a onclick="javascript:fn_Page('/IDSP/idsp/idspStatListByAreaPage.do', '지역별 상황전파 현황', '109001003002'); ">
+              지역별 상황전파 현황
+            </a>
+          </li>
+          <li style="cursor: pointer;">
+            <a onclick="javascript:fn_Page('/IDSP/idsp/idspStatListByDstrTyPage.do', '재난유형별 상황전파 현황', '109001003003'); ">
+              재난유형별 상황전파 현황
+            </a>
+          </li>
+          <li style="cursor: pointer;">
+            <a onclick="javascript:fn_Page('/IDSP/idsp/telEmsiListPage.do', '이통사 송출 리스트', '109001003004'); ">
+              이통사 송출 리스트
+            </a>
+          </li>
+          <li style="cursor: pointer;">
+            <a onclick="javascript:fn_Page('/IDSP/idsp/idspStatListByYearPage.do', '연도별 상황전파 현황', '109001003005'); ">
+              연도별 상황전파 현황
+            </a>
+          </li>
+          <li style="cursor: pointer;">
+            <a onclick="javascript:fn_Page('/IDSP/idsp/idspStatListByMonthPage.do', '월별 상황전파 현황', '109001003006'); ">
+              월별 상황전파 현황
+            </a>
+          </li>
+          <li style="cursor: pointer;">
+            <a onclick="javascript:fn_Page('/IDSP/idsp/idspStatListByDayPage.do', '일별 상황전파 현황', '109001003007'); ">
+              일별 상황전파 현황
+            </a>
+          </li>
+          </ul>
+          </li>
+          <li class="depth3">
+            <a href="#">연계현황</a>
+          <ul style="display: none;">
+          <li style="cursor: pointer;">
+            <a onclick="javascript:fn_Page('/IDSP/inf/infInfoListPage.do', '연계정보', '109001004001'); ">
+              연계정보
+            </a>
+          </li>
+          <li style="cursor: pointer;">
+            <a onclick="javascript:fn_Page('/IDSP/inf/kmaFlashListPage.do', '기상특보', '109001004002'); ">
+              기상특보
+            </a>
+          </li>
+          <li style="cursor: pointer;">
+            <a onclick="javascript:fn_Page('/IDSP/inf/rivFloodListPage.do', '홍수예보', '109001004003'); ">
+              홍수예보
+            </a>
+          </li>
+          <li style="cursor: pointer;">
+            <a onclick="javascript:fn_Page('/IDSP/inf/kmaEarthInfmListPage.do', '지진', '109001004004'); ">
+              지진
+            </a>
+          </li>
+          </ul>
+          </li>
+        </ul>
+      </li>
+      <li class="intro">
+        <a href="#" class="depth1">
+          시스템소개
+        </a>
+        
+          <ul class="depth2" style="display: none;">
+                    <li style="cursor: pointer;" class="">
+                      <a onclick="fn_Page('/IDSP/info/sysinfoPage.do', ' 시스템개요', '109002001');">
+                        시스템개요
+                      </a>
+                    </li>
+                    <li style="cursor: pointer;" class="">
+                      <a onclick="fn_Page('/IDSP/info/emerDstrIntroPage.do', ' 긴급재난문자소개', '109002002');">
+                        긴급재난문자소개
+                      </a>
+                    </li>
+                    <li style="cursor: pointer;" class="">
+                      <a onclick="fn_Page('/IDSP/info/dmbInfoPage.do', ' DMB소개', '109002003');">
+                        DMB소개
+                      </a>
+                    </li>
+                    <li style="cursor: pointer;" class="">
+                      <a onclick="fn_Page('/IDSP/info/tySubtitInfoPage.do', ' TY자막 방송 소개', '109002004');">
+                        TY자막 방송 소개
+                      </a>
+                    </li>
+          </ul>
+        
+      </li>
+      
+      <li class="boardM">
+        <a href="#" class="depth1">
+          게시판
+        </a>
+        
+          <ul class="depth2" style="display: none;">
+                    <li style="cursor: pointer;" class="">
+                      <a onclick="fn_Page('/IDSP/notice/noticePage.do', ' 공지사항', '109003001');">
+                        공지사항
+                      </a>
+                    </li>
+                    <li style="cursor: pointer;" class="">
+                      <a onclick="fn_Page('/IDSP/faq/faqPage.do', ' FAQ', '109003002');">
+                        FAQ
+                      </a>
+                    </li>
+          </ul>
+        
+      </li>
+      
+      <li class="current">
+        <a href="#" class="depth1">
+          상황전파 현황
+        </a>
+        
+          <ul class="depth2" style="display: none;">
+                    <li style="cursor: pointer;" class="">
+                      <a onclick="fn_Page('/IDSP/stat/realIdspStatPage.do', ' 상황전파 현황', '109004001');">
+                        상황전파 현황
+                      </a>
+                    </li>
+                    <li style="cursor: pointer;" class="">
+                      <a onclick="fn_Page('/IDSP/stat/linkStatPage.do', ' 연계정보 현황', '109004002');">
+                        연계정보 현황
+                      </a>
+                    </li>
+                    <li style="cursor: pointer;" class="">
+                      <a onclick="fn_Page('/IDSP/stat/sysStatPage.do', ' 시스템 현황', '109004003');">
+                        시스템 현황
+                      </a>
+                    </li>
+                    <li style="cursor: pointer;" class="">
+                      <a onclick="fn_Page('/IDSP/stat/monitoringPage.do', ' 상황실 모니터링', '109004004');">
+                        상황실 모니터링
+                      </a>
+                    </li>
+                    
+                  <li style="cursor: pointer;">
+                  <a onclick="javascript:fn_Popup('/IDSP/stat/dstrWarningStatPage.do', '재난 예경보 송출현황', '109004005'); ">
+                    재난 예경보 송출현황
+                  </a>
+                  </li>
+          </ul>
+      </li>
+      <li class="setting">
+        <a href="#" class="depth1">
+          환경설정
+        </a>
+          <ul class="depth2" style="display: none;">
+            <li style="cursor: pointer;" class="">
+              <a onclick="fn_Page('/IDSP/idspTmplt/idspTemplateListPage.do', ' 표준문안관리', '109005001');">
+                표준문안관리
+              </a>
+            </li>
+            <li style="cursor: pointer;" class="">
+              <a onclick="fn_Page('/IDSP/atsp/atspCfgListPage.do', ' 자동상황전파 규칙관리', '109005002');">
+                자동상황전파 규칙관리
+              </a>
+            </li>
+            <li style="cursor: pointer;" class="">
+              <a onclick="fn_Page('/IDSP/areagroup/areaGroupListPage.do', ' 지역그룹 관리', '109005003');">
+                지역그룹 관리
+              </a>
+            </li>
+            <li style="cursor: pointer;" class="">
+              <a onclick="fn_Page('/IDSP/usr/usrlogPage.do', ' 사용자 접속이력', '109005004');">
+                사용자 접속이력
+              </a>
+            </li>
+            <li style="cursor: pointer;" class="">
+              <a onclick="fn_Page('/IDSP/usr/usrlogMonPage.do', ' 월별/기관별 사용자', '109005005');">
+                월별/기관별 사용자
+              </a>
+            </li>
+            <li style="cursor: pointer;" class="">
+              <a onclick="fn_Page('/IDSP/usr/usrlogDayPage.do', ' 일별/기관별 사용자', '109005006');">
+                일별/기관별 사용자
+              </a>
+            </li>
+            <li style="cursor: pointer;" class="">
+              <a onclick="fn_Page('/IDSP/code/codeListPage.do', ' 코드관리', '109006001');">
+                코드관리
+              </a>
+            </li>
+            <li style="cursor: pointer;" class="">
+              <a onclick="fn_Page('/IDSP/org/orgListPage.do', ' 기관관리', '109006002');">
+                기관관리
+              </a>
+            </li>
+            <li style="cursor: pointer;" class="">
+              <a onclick="fn_Page('/IDSP/area/areaListPage.do', ' 지역관리', '109006003');">
+                지역관리
+              </a>
+            </li>
+            <li style="cursor: pointer;" class="">
+              <a onclick="fn_Page('/IDSP/kmazone/kmaZoneListPage.do', ' 기상특보 예보구역 관리', '109006004');">
+                기상특보 예보구역 관리
+              </a>
+            </li>
+            <li style="cursor: pointer;" class="">
+              <a onclick="fn_Page('/IDSP/area/areaSync.do', ' 이통사 지역관리', '109006005');">
+                이통사 지역관리
+              </a>
+            </li>
+          </ul>
+      </li>
+    </ul>
+  </div> 
+
   <div id="lnb" class="lnb min_width">
     <button type="button" class="btn_sitemap" toggle_sitemap>
       <span>사이트맵</span>      
@@ -107,7 +344,7 @@
         </ul>
       </li>
     </ul>
-  </div> 
+  </div>
 </div>
 
 

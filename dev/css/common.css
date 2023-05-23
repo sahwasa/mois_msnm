@@ -223,7 +223,6 @@ label input{margin-top:-3px;}
 .ui-datepicker select.ui-datepicker-month{margin-left:8px;}
 .ui-datepicker-trigger,
 .ui-monthpicker-trigger{cursor:pointer;margin-left:9px;}
-
 .ui-monthpicker select.ui-datepicker-year{width:75px;}
 
 .ui-datepicker{display:none;}
