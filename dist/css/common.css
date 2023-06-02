@@ -163,7 +163,7 @@ ul.list_attach{margin-top:5px;padding:5px 10px;}
 .list_attach .axi_del{width:11px;height:11px;background-color:#ef4848;border-radius:2px;overflow:hidden;vertical-align:middle;}
 .list_attach .axi_del::before{color:#fff;font-size:11px;line-height:11px;vertical-align:top;}
 
-.overlay{position:fixed;left:0;top:0px;width:100%;height:100%;background:rgba(0,0,0,.3);z-index:1400;display:none;}
+.overlay{position:fixed;left:0;top:0px;width:100%;height:100%;background:rgba(0,0,0,.3);z-index:10000;display:none;}
 .scroll-y{overflow-y:auto;}
 
 /* input [ radio | checkbox ] */

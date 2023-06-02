@@ -53,7 +53,7 @@
 .request_alert .blink{animation:blink 1.5s ease infinite;color:#fff;}
 .request_alert .blink::before{color:#fff; }
 
-.area_select{top:15px;width:1086px;margin-left:-543px;}
+.area_select{top:15px;width:1086px!important;;margin-left:-543px;}
 .area_select .pop_footer .btn_area{padding-top:0;}
 .area_select .pop_body > .fl{width:592px;}
 .area_select .pop_body > .fr{width:422px;}
@@ -201,3 +201,16 @@
 .menu_accordion .open + dd li:first-child::before{border-width:1px 0 0 1px;top:11px;}
 .menu_accordion .open + dd li:last-child::before{border-width:0 0 1px 1px;top:-10px;}
 .menu_accordion .open + dd li:only-child::before{border-width:1px 0 0 0;top:10px;}
+
+@media all and (max-width:1180px){
+  .overlay{width:100%;overflow-x:auto;}
+  .modal{width:100%;left:0;top:0;margin-left:0;max-height:100vh;border-radius:0;border:none;box-shadow:none;}
+  .modal .pop_tit h1{line-height:40px;}
+  .pop_tit [role="btn_close"]{top:11px;right:15px;}
+  .modal .pop_body{max-height:calc(100vh - 70px);padding:15px;}
+  .file_text{width:100%;overflow:hidden;text-overflow:ellipsis;}
+  .board_set dt{clear:left;padding-left:0;}
+  .board_set dt::before{content:"·";margin-right:3px;font-weight:bold;}
+  .board_set dt,
+  .board_set dd{line-height:20px;border:none;}
+}

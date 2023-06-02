@@ -21,10 +21,44 @@
       }, delay);
     },
     'click' :  function(){
-      $header.removeClass('lnb_hover');
       $header.removeClass(full_lnb);
     }
   });
+  function gnb() {
+    var lm = $("#gnb");
+    lm.a = lm.find(">li>a");
+    lm.dep2 = lm.find(">li>ul");
+    lm.dep2.a = lm.dep2.find(">li>a");
+//    lm.dep2.hide();
+    lm.dep3 = lm.dep2.find(">li>ul");
+//    lm.dep3.hide();
+
+    lm.a.on("click", function () {
+      lm.a.removeClass("on");
+      if ($(this).next("ul").is(":hidden")) {
+        lm.dep2.slideUp("slow");
+        $(this).next("ul").slideDown("slow");
+      }
+      // 클릭 후 슬라이드
+      if ($(this).next("ul").is("ul")) {
+        $(this).addClass("on");
+      }
+      return false;
+    });
+
+    lm.dep2.a.on("click", function () {
+      lm.dep2.a.removeClass("on");
+      if ($(this).next("ul").is(":hidden")) {
+        lm.dep3.slideUp("slow");
+        $(this).next("ul").slideDown("slow");
+        $(this).toggleClass("on");
+      } else {
+        lm.dep3.slideUp("slow");
+        return false;
+      }
+    });
+  }
+  gnb();
 
   $('[toggle_sitemap]').on('click',function(){
     $header.toggleClass(full_lnb);
